@@ -24,7 +24,6 @@ public class Gear : MonoBehaviour
         if (other.TryGetComponent(typeof(IDamageable), out damageable)) {
             ((IDamageable)damageable).TakeDamage(gearSO.gearDamage);
             gearSO.gearSpecialAction.GetComponent<GearSpecialAction>().Invoke();
-            Destroy(gameObject);
         }
     }
 }
