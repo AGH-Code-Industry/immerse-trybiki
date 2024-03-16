@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerStatistics : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerStatistics : MonoBehaviour
     [SerializeField] private float movementSpeed = 2f;
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private int currentMoney = 2;
-    
+
     [SerializeField] private TextMeshProUGUI moneyText;
 
     public int CurrentMoney {
@@ -45,6 +46,7 @@ public class PlayerStatistics : MonoBehaviour
         if (currHp <= 0)
         {
             // todo: umieranie
+            GetComponent<Player>().onPlayerDead?.Invoke();
         }
     }
 

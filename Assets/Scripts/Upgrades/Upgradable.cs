@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.Compression;
 using UnityEngine;
 
 public class Upgradable : MonoBehaviour
@@ -15,4 +16,9 @@ public class Upgradable : MonoBehaviour
     {
         return;
     }
+
+    /*public bool CanBuy(int value)
+    {
+        if (playerStatistics.)
+    }*/
 }
