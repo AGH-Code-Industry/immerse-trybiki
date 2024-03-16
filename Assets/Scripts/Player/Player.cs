@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RangeAttack;
 using UnityEngine;
-
+[RequireComponent(typeof(PlayerGearsManager))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private int maxHp;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     private bool isAttackingRange;
     private Vector2 movement;
     private Rigidbody2D rb;
+    private PlayerGearsManager gearsManager;
     private PlayerAnimations animations;
     private bool canJump = false;
     private bool isGrounded = true;
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour
         InputManager.input.Player.RangeAttack.performed += TriggerRangeAttack;
         rb = GetComponent<Rigidbody2D>();
         animations = GetComponent<PlayerAnimations>();
+        gearsManager = GetComponent<PlayerGearsManager>();
+        gearsManager.ResetGearSetup();
         jumpsLeft = numberOfJumps;
     }
 
@@ -89,6 +93,10 @@ public class Player : MonoBehaviour
         isAttackingRange = true;
         isAttacking = true;
         StartCoroutine(Attack(rangeAttackCooldown));
+        if (gearsManager.CanThrowGear()) {
+            gearsManager.ThrowGear();
+        }
+        
         Debug.Log("range");
     }
 

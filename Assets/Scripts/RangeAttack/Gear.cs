@@ -11,7 +11,7 @@ public class Gear : MonoBehaviour
     [SerializeField]
     private GearSO gearSO;
     private Rigidbody2D rb;
-    private void Start() {
+    private void Awake() {
         rb = transform.GetComponent<Rigidbody2D>();
     }
 
@@ -21,7 +21,7 @@ public class Gear : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other) {
         Component damageable = null;
-        if (other.TryGetComponent(typeof(IDamageable), out damageable)) {
+        if (other.TryGetComponent(typeof(IDamageable), out damageable) && !other.CompareTag("Player") ){
             ((IDamageable)damageable).TakeDamage(gearSO.gearDamage);
             gearSO.gearSpecialAction.GetComponent<GearSpecialAction>().Invoke();
         }

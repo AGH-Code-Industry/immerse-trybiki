@@ -5,8 +5,6 @@ using UnityEngine;
 public class GearQueue : MonoBehaviour
 {
     private Queue<GameObject> _gearQueue = new Queue<GameObject>();
-    [SerializeField]
-    private List<GameObject> initialGearList = new List<GameObject>();
     
     public void AddGear(GameObject gear) {
         _gearQueue.Enqueue(gear);
@@ -25,11 +23,15 @@ public class GearQueue : MonoBehaviour
         _gearQueue.Clear();
     }
 
-    public void SetInitialGearSetup() {
+    public void SetGearSetup(List<GameObject> gearSet) {
         ClearGearQueue();
-        foreach (var gear in initialGearList) {
+        foreach (var gear in gearSet) {
             _gearQueue.Enqueue(gear);
         }
+    }
+
+    public bool HasSpaceForNextGear(int maxSize) {
+        return _gearQueue.Count < maxSize;
     }
 
     public bool HasAnyGear() {

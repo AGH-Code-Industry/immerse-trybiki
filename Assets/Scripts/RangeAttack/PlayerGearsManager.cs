@@ -1,33 +1,44 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-public class PlayerGearsManager : MonoBehaviour
-{
-    private GearQueue _gearQueue;
+namespace RangeAttack {
+    [RequireComponent(typeof(Collider2D))]
+    public class PlayerGearsManager : MonoBehaviour
+    {
+        private GearQueue _gearQueue;
+        [SerializeField]
+        private List<GameObject> initialGearList = new List<GameObject>();
+        [SerializeField]
+        private int maxGears = 6;
 
-    public bool CanThrowGear() {
-        return _gearQueue.HasAnyGear();
-    }
-    
-    public void ThrowGear() {
-        if (_gearQueue.TryGetNextGear(out var gear)) {
-            gear.transform.position = transform.position;
-            gear.SetActive(true);
-            gear.GetComponent<Gear>().ThrowGear();
+        private void Start() {
+            _gearQueue = GetComponent<GearQueue>();
         }
-    }
-    
-    public void PickupGear(GameObject gear) {
-        _gearQueue.AddGear(gear);
-        gear.SetActive(false);
-    }
 
-    public void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Gear")) {
-            PickupGear(other.gameObject);
+        public bool CanThrowGear() {
+            return _gearQueue.HasAnyGear();
+        }
+    
+        public void ThrowGear() {
+            if (_gearQueue.TryGetNextGear(out var gear)) {
+                GameObject gearObject = Instantiate(gear, transform.position, Quaternion.identity);
+                gearObject.GetComponent<Gear>().ThrowGear();
+            }
+        }
+    
+        public void PickupGear(GameObject gear) {
+            _gearQueue.AddGear(gear);
+            gear.SetActive(false);
+        }
+
+        public void OnTriggerEnter2D(Collider2D other) {
+            if (other.gameObject.CompareTag("GearPickUp") && _gearQueue.HasSpaceForNextGear(maxGears)) {
+                PickupGear(other.gameObject);
+            }
+        }
+        
+        public void ResetGearSetup() {
+            _gearQueue.SetGearSetup(initialGearList);
         }
     }
 }
