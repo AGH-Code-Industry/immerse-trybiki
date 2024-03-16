@@ -14,19 +14,20 @@ public enum EnemyState {
 // [RequireComponent(typeof(EnemyAttack))]
 public class Enemy : MonoBehaviour, IDamageable {
     [SerializeField] private EnemySO _enemySO;
+    [SerializeField] private HealthBarUI _healthBarUI;
     
     private EnemyMovement _movementModule;
     private EnemyAttack _enemyAttack;
 
     public EnemyState EnemyState => _enemyState;
-    public float HP => _hp;
+    public float HP => _hpMax;
     public float Speed => _speed;
     public AttackType AttackType => _attackType;
     public float AttackDamage => _attackDamage;
     public float AttackDistance => _attackDistance;
     public float AttackCooldownMax => _attackCooldownMax;
     
-    private float _hp;
+    private float _hpMax;
     private float _attackDamage;
     private float _timeMultiplayer;
     private AttackType _attackType;
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     private float _attackCooldownMax;
     private float _aimingDistance;
 
+    private float _hp;
     private float _attackCooldown;
 
     private IDamageable _target;
@@ -44,7 +46,8 @@ public class Enemy : MonoBehaviour, IDamageable {
     protected virtual void Awake() {
         _enemyAttack = GetComponent<EnemyAttack>();
         _movementModule = GetComponent<EnemyMovement>();
-        _hp = _enemySO.hp;
+        _hpMax = _enemySO.hp;
+        _hp = _hpMax;
         _attackDamage = _enemySO.attackDamage;
         _timeMultiplayer = _enemySO.timeMultiplayer;
         _attackType = _enemySO.attackType;
@@ -120,6 +123,7 @@ public class Enemy : MonoBehaviour, IDamageable {
 
     public void TakeDamage(float amount) {
         _hp -= amount;
+        _healthBarUI.SetFill(_hp/_hpMax);
         if (_hp <= 0) {
             Death();
         }
