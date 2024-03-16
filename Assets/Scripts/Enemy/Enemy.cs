@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour, IDamageable {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
-            SetTarget(other.GetComponent<Player>());
+            // SetTarget(other.GetComponent<Player>());
         }
     }
 

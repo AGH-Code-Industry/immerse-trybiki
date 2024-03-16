@@ -7,4 +7,8 @@ public class Flying : EnemyMovement
     public override void Move() {
         
     }
+
+    public override void SetTarget(IDamageable target) {
+        throw new System.NotImplementedException();
+    }
 }
