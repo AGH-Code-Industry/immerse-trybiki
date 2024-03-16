@@ -287,15 +287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a771f55dc23b94ab42584ee0c3f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 1
-  currHp: 0
-  meleeDmg: 1
-  weaponDmg: 1
-  meleeAttackCooldown: 1
-  rangeAttackCooldown: 0
-  movementSpeed: 2
-  numberOfJumps: 3
-  jumpForce: 5
   meleeAttackCollider: {fileID: 4937479014777829611}
 --- !u!114 &8626768568891006273
 MonoBehaviour:
@@ -335,3 +326,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed0fa3f85b76f0439483adc03bf6411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: 10
+  currHp: 0
+  numberOfJumps: 1
+  meleeDmg: 0
+  weaponDmg: 0
+  meleeAttackCooldown: 1
+  rangeAttackCooldown: 1
+  movementSpeed: 2
+  jumpForce: 5

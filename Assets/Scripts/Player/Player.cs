@@ -35,7 +35,7 @@ public class Player : MonoBehaviour, IDamageable {
         gearsManager.ResetGearSetup();
         
         stats = GetComponent<PlayerStatistics>();
-        jumpsLeft = stats.GetNumberOfJumps();
+        jumpsLeft = stats.NumberOfJumps;
     }
 
     private void FixedUpdate()
@@ -45,18 +45,18 @@ public class Player : MonoBehaviour, IDamageable {
         {
             canJump = true;
         }
-        rb.velocity = new Vector2(-movement.x * movementSpeed * Time.deltaTime * 100, rb.velocity.y);
+        rb.velocity = new Vector2(-movement.x * stats.MovementSpeed * Time.deltaTime * 100, rb.velocity.y);
 
         if (Mathf.Abs(rb.velocity.y) < 0.01f)
         {
             isGrounded = true;
-            jumpsLeft = stats.GetNumberOfJumps();
+            jumpsLeft = stats.NumberOfJumps;
             canJump = true;
         }
 
         if (movement.y > 0 && (isGrounded || jumpsLeft > 0) && canJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, stats.JumpForce);
             isGrounded = false; 
             jumpsLeft -= 1;
             canJump = false;
@@ -80,13 +80,13 @@ public class Player : MonoBehaviour, IDamageable {
     public void MeleeAttack()
     {
         meleeAttackCollider.enabled = true;
-        StartCoroutine(AttackMeleeCooldown(meleeAttackCooldown));
+        StartCoroutine(AttackMeleeCooldown(stats.MeleeAttackCooldown));
         StartCoroutine(MeleeHitBoxDisable(0.05f));
     }
 
     public void RangeAttack()
     {
-        StartCoroutine(AttackRangeCooldown(rangeAttackCooldown));
+        StartCoroutine(AttackRangeCooldown(stats.RangeAttackCooldown));
         if (gearsManager.CanThrowGear()) {
             gearsManager.ThrowGear();
         }
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour, IDamageable {
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<Enemy>().TakeDamage(meleeDmg + weaponDmg);
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(stats.MeleeDMG + stats.WeaponDMG);
         }
     }
 

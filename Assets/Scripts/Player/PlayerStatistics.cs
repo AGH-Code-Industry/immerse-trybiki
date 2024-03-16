@@ -7,12 +7,21 @@ public class PlayerStatistics : MonoBehaviour
     [SerializeField] private float maxHp = 10f;
     [SerializeField] private float currHp;
     [SerializeField] private int numberOfJumps = 1;
-    [SerializeField] private int meleeDmg;
-    [SerializeField] private int weaponDmg;
-    [SerializeField] private float meleeAttackCooldown {get; }
+    [SerializeField] private float meleeDmg;
+    [SerializeField] private float weaponDmg;
+    [SerializeField] private float meleeAttackCooldown = 1f;
     [SerializeField] private float rangeAttackCooldown = 1f;
     [SerializeField] private float movementSpeed = 2f;
     [SerializeField] private float jumpForce = 2f;
+
+    public float MeleeAttackCooldown => meleeAttackCooldown;
+    public float RangeAttackCooldown => rangeAttackCooldown;
+    public float MovementSpeed => movementSpeed;
+    public float JumpForce => jumpForce;
+    public float MeleeDMG => meleeDmg;
+    public float WeaponDMG => weaponDmg;
+    public int NumberOfJumps => numberOfJumps;
+
 
     private void Start()
     {
@@ -27,6 +36,4 @@ public class PlayerStatistics : MonoBehaviour
             // todo: umieranie
         }
     }
-
-    public int GetNumberOfJumps() { return numberOfJumps; }
 }
