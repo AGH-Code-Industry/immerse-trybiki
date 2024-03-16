@@ -18,6 +18,7 @@ public class Gear : MonoBehaviour
     public void ThrowGear(Vector3 player) {
         var actualCameraPosition = InputManager.MouseWorldPosition;
         rb.AddForce(new Vector2(actualCameraPosition.x - player.x, actualCameraPosition.y - player.y).normalized * gearSO.gearThrowForce, ForceMode2D.Impulse);
+        rb.AddTorque(10);
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
