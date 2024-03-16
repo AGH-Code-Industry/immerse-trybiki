@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using RangeAttack;
 using UnityEngine;
 [RequireComponent(typeof(PlayerGearsManager))]
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour, IDamageable {
+    public static Player instance;
     [SerializeField] private int maxHp;
     [SerializeField] private int meleeDmg;
     [SerializeField] private int weaponDmg;
@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private BoxCollider2D meleeAttackCollider;
 
-    private bool isAttacking;
     private bool isAttackingMelee;
     private bool isAttackingRange;
     private Vector2 movement;
@@ -29,9 +28,12 @@ public class Player : MonoBehaviour
     private bool isGrounded = true;
     private int jumpsLeft;
 
+    private void Awake() {
+        instance = this;
+    }
+
     private void Start()
     {
-        isAttacking = false;
         InputManager.input.Player.MeleeAttack.performed += TriggerMeleeAttack;
         InputManager.input.Player.RangeAttack.performed += TriggerRangeAttack;
         rb = GetComponent<Rigidbody2D>();
@@ -68,36 +70,31 @@ public class Player : MonoBehaviour
     }
     void TriggerMeleeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        if (isAttackingMelee) return;
+        isAttackingMelee = true;
         animations.AttackMelee();
     }
 
     void TriggerRangeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        if (isAttackingRange) return;
+        isAttackingRange = true;
         animations.AttackRange();
     }
 
     public void MeleeAttack()
     {
-        if (isAttackingMelee) return;
-        isAttackingMelee = true;
-        isAttacking = true;
         meleeAttackCollider.enabled = true;
-        StartCoroutine(Attack(meleeAttackCooldown));
+        StartCoroutine(AttackMeleeCooldown(meleeAttackCooldown));
         StartCoroutine(MeleeHitBoxDisable(0.05f));
-        Debug.Log("Melee");
     }
 
     public void RangeAttack()
     {
-        if (isAttackingRange) return;
-        isAttackingRange = true;
-        isAttacking = true;
-        StartCoroutine(Attack(rangeAttackCooldown));
+        StartCoroutine(AttackRangeCooldown(rangeAttackCooldown));
         if (gearsManager.CanThrowGear()) {
             gearsManager.ThrowGear();
         }
-        
-        Debug.Log("range");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -108,11 +105,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator Attack(float seconds)
+    IEnumerator AttackMeleeCooldown(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        isAttacking = false;
         isAttackingMelee = false;
+    }
+
+    IEnumerator AttackRangeCooldown(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         isAttackingRange = false;
     }
 
@@ -124,6 +125,12 @@ public class Player : MonoBehaviour
 
     public Vector2 GetMovement() { return movement; }
     public Vector2 GetVelocity() { return rb.velocity; }
-    public bool GetIsAttacking() { return isAttacking; }
     public bool GetIsGrounded() {  return isGrounded; }
+    public void TakeDamage(float amount) {
+        Debug.Log("Dupa: " + amount);
+    }
+
+    public Transform GetTransform() {
+        return transform;
+    }
 }
