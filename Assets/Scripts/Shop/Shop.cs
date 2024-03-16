@@ -19,7 +19,6 @@ public class Shop : MonoBehaviour
 
     private void EnterExitShop(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        Debug.Log("siema");
         if (playerInShop)
         {
             playerInShop = false;
@@ -47,7 +46,6 @@ public class Shop : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("trigger");
         if (collision.gameObject.tag == "Player")
         {
             playerNeerShop = false;

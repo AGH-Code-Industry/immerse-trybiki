@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9168f9f7291394f4ea01900bc6d80507, type: 3}
-  m_Name: New Upgrade SO
+  m_Name: MaxPlayerHp
   m_EditorClassIdentifier: 
-  upgradeName: Test
-  upgradeDescription: ddddddddddddd
-  upgradeUI: {fileID: 21300000, guid: 3229de7050762dd43b44a5f747269f11, type: 3}
-  upgradePrice: 1
-  nextUpgradeIncreaseCost: 3
-  upgradable: {fileID: 867586414220417331, guid: a9f7b4ea1b4525a408c56225343882c3, type: 3}
-  upgradeValue: 1
+  upgradeName: Max hp
+  upgradeDescription: Increase your max hp
+  upgradeUI: {fileID: 21300000, guid: 59d6a0740f5fa2d43bace77687889e18, type: 3}
+  upgradePrice: 11
+  nextUpgradeIncreaseCost: 80
+  upgradable: {fileID: 867586414220417331, guid: 1daf082dc42441c45af7d5675b3df381, type: 3}
+  upgradeValue: 10
