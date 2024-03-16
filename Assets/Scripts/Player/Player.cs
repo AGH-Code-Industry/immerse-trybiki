@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int meleeDmg;
     [SerializeField] private int weaponDmg;
     [SerializeField] private float meleeAttackCooldown;
+    [SerializeField] private float rangeAttackCooldown;
     [SerializeField] private float movementSpeed = 2f;
     [SerializeField] private int numberOfJumps = 1;
     [SerializeField] private float jumpForce = 2f;
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour
     [SerializeField] private BoxCollider2D meleeAttackCollider;
 
     private bool isAttacking;
+    private bool isAttackingMelee;
+    private bool isAttackingRange;
     private Vector2 movement;
     private Rigidbody2D rb;
     private PlayerAnimations animations;
@@ -27,8 +30,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         isAttacking = false;
-        InputManager.input.Player.MeleeAttack.performed += MeleeAttack;
-        InputManager.input.Player.RangeAttack.performed += RangeAttack;
+        InputManager.input.Player.MeleeAttack.performed += TriggerMeleeAttack;
+        InputManager.input.Player.RangeAttack.performed += TriggerRangeAttack;
         rb = GetComponent<Rigidbody2D>();
         animations = GetComponent<PlayerAnimations>();
         jumpsLeft = numberOfJumps;
@@ -59,23 +62,34 @@ public class Player : MonoBehaviour
             animations.Jump();
         }
     }
-
-    void MeleeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    void TriggerMeleeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        if (isAttacking) return;
-        isAttacking = true;
         animations.AttackMelee();
+    }
+
+    void TriggerRangeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        animations.AttackRange();
+    }
+
+    public void MeleeAttack()
+    {
+        if (isAttackingMelee) return;
+        isAttackingMelee = true;
+        isAttacking = true;
         meleeAttackCollider.enabled = true;
         StartCoroutine(Attack(meleeAttackCooldown));
         StartCoroutine(MeleeHitBoxDisable(0.05f));
+        Debug.Log("Melee");
     }
 
-    void RangeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    public void RangeAttack()
     {
-        if (isAttacking) return;
+        if (isAttackingRange) return;
+        isAttackingRange = true;
         isAttacking = true;
-        animations.AttackRange();
-        StartCoroutine(Attack(meleeAttackCooldown));
+        StartCoroutine(Attack(rangeAttackCooldown));
+        Debug.Log("range");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -90,6 +104,8 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         isAttacking = false;
+        isAttackingMelee = false;
+        isAttackingRange = false;
     }
 
     IEnumerator MeleeHitBoxDisable(float seconds)
