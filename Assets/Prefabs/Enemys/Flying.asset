@@ -19,5 +19,6 @@ MonoBehaviour:
   timeMultiplayer: 1.1
   speed: 3
   caughtDistance: 1000
-  attackDistance: 5
-  cooldown: 0
+  attackDistance: 2
+  aimingDistance: 0.5
+  cooldown: 2

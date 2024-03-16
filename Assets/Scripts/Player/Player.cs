@@ -127,6 +127,7 @@ public class Player : MonoBehaviour, IDamageable {
     }
 
     public Transform GetTransform() {
+        Debug.Log("tranform");
         return transform;
     }
 }
