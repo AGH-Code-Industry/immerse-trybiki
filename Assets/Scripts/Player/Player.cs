@@ -88,7 +88,7 @@ public class Player : MonoBehaviour, IDamageable {
     {
         StartCoroutine(AttackRangeCooldown(stats.RangeAttackCooldown));
         if (gearsManager.CanThrowGear()) {
-            gearsManager.ThrowGear();
+            gearsManager.ThrowGear(transform.position);
         }
     }
 

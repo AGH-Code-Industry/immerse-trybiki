@@ -19,10 +19,10 @@ namespace RangeAttack {
             return _gearQueue.HasAnyGear();
         }
     
-        public void ThrowGear() {
+        public void ThrowGear(Vector3 player) {
             if (_gearQueue.TryGetNextGear(out var gear)) {
                 GameObject gearObject = Instantiate(gear, transform.position, Quaternion.identity);
-                gearObject.GetComponent<Gear>().ThrowGear();
+                gearObject.GetComponent<Gear>().ThrowGear(player);
             }
         }
     
