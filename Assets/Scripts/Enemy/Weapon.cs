@@ -10,7 +10,6 @@ public class Weapon : EnemyAttack {
     }
 
     public override void Attack(IDamageable target) {
-        Debug.Log("Dupa");
     }
 
     public override void LostTarget() {

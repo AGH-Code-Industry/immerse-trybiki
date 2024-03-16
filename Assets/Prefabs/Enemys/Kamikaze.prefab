@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySO: {fileID: 11400000, guid: 47ce524e76b4c6b2192e5d4aeeee7a54, type: 2}
+  _healthBarUI: {fileID: 0}
 --- !u!50 &5789489638335954863
 Rigidbody2D:
   serializedVersion: 4

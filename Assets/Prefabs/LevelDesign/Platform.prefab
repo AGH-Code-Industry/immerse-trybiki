@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3911577580355339276}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1011812141050983742}
   - component: {fileID: 5406417588321050987}
   - component: {fileID: 3540739496024584141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3275388590358358089}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
