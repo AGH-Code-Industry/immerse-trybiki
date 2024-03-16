@@ -18,5 +18,6 @@ MonoBehaviour:
   attackDamage: 50
   timeMultiplayer: 1.1
   speed: 2
-  caughtDistance: 5
+  caughtDistance: 0
   attackDistance: 1
+  cooldown: 0
