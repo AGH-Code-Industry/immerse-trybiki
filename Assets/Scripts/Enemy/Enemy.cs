@@ -67,15 +67,18 @@ public class Enemy : MonoBehaviour, IDamageable {
     private void CaughtPlayer() {
         _movementModule.SetTarget(Player.instance);
         _enemyState = EnemyState.Following;
+        _target = Player.instance;
     }
 
     private void LostPlayer() {
         _movementModule.LostTarget();
         _enemyState = EnemyState.Idle;
+        _target = null;
     }
 
     private void AttackPlayer() {
         _enemyState = EnemyState.Attacking;
+        _enemyAttack.SetTarget(Player.instance);
         _enemyAttack.Attack(Player.instance);
     }
 

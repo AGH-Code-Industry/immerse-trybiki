@@ -8,7 +8,8 @@ public abstract class EnemyAttack : MonoBehaviour {
     protected virtual void Awake() {
         _baseEnemy = GetComponent<Enemy>();
     }
-    
+
+    public abstract void SetTarget(IDamageable target);
     public abstract void Attack(IDamageable target);
     public abstract void LostTarget();
 }

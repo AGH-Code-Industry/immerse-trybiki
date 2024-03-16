@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour, IDamageable {
+    public static Player instance;
     [SerializeField] private int maxHp;
     [SerializeField] private int meleeDmg;
     [SerializeField] private int weaponDmg;
@@ -23,6 +23,10 @@ public class Player : MonoBehaviour
     private bool canJump = false;
     private bool isGrounded = true;
     private int jumpsLeft;
+
+    private void Awake() {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -102,4 +106,11 @@ public class Player : MonoBehaviour
     public Vector2 GetVelocity() { return rb.velocity; }
     public bool GetIsAttacking() { return isAttacking; }
     public bool GetIsGrounded() {  return isGrounded; }
+    public void TakeDamage(float amount) {
+        Debug.Log("Dupa: " + amount);
+    }
+
+    public Transform GetTransform() {
+        return transform;
+    }
 }

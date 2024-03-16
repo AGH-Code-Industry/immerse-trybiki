@@ -6,9 +6,13 @@ using UnityEngine;
 public class Kamikaze : EnemyAttack {
     
     private IDamageable _target;
-
+    
     public override void Attack(IDamageable target) {
         Explode();
+    }
+    
+    public override void SetTarget(IDamageable target) {
+        _target = target;
     }
 
     public override void LostTarget() {
