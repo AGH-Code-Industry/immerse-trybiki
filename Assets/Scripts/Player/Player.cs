@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private BoxCollider2D meleeAttackCollider;
 
-    private bool isAttacking;
     private bool isAttackingMelee;
     private bool isAttackingRange;
     private Vector2 movement;
@@ -29,7 +28,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        isAttacking = false;
         InputManager.input.Player.MeleeAttack.performed += TriggerMeleeAttack;
         InputManager.input.Player.RangeAttack.performed += TriggerRangeAttack;
         rb = GetComponent<Rigidbody2D>();
@@ -64,32 +62,28 @@ public class Player : MonoBehaviour
     }
     void TriggerMeleeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        if (isAttackingMelee) return;
+        isAttackingMelee = true;
         animations.AttackMelee();
     }
 
     void TriggerRangeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        if (isAttackingRange) return;
+        isAttackingRange = true;
         animations.AttackRange();
     }
 
     public void MeleeAttack()
     {
-        if (isAttackingMelee) return;
-        isAttackingMelee = true;
-        isAttacking = true;
         meleeAttackCollider.enabled = true;
-        StartCoroutine(Attack(meleeAttackCooldown));
+        StartCoroutine(AttackMeleeCooldown(meleeAttackCooldown));
         StartCoroutine(MeleeHitBoxDisable(0.05f));
-        Debug.Log("Melee");
     }
 
     public void RangeAttack()
     {
-        if (isAttackingRange) return;
-        isAttackingRange = true;
-        isAttacking = true;
-        StartCoroutine(Attack(rangeAttackCooldown));
-        Debug.Log("range");
+        StartCoroutine(AttackRangeCooldown(rangeAttackCooldown));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -100,11 +94,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator Attack(float seconds)
+    IEnumerator AttackMeleeCooldown(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        isAttacking = false;
         isAttackingMelee = false;
+    }
+
+    IEnumerator AttackRangeCooldown(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         isAttackingRange = false;
     }
 
@@ -116,6 +114,5 @@ public class Player : MonoBehaviour
 
     public Vector2 GetMovement() { return movement; }
     public Vector2 GetVelocity() { return rb.velocity; }
-    public bool GetIsAttacking() { return isAttacking; }
     public bool GetIsGrounded() {  return isGrounded; }
 }
