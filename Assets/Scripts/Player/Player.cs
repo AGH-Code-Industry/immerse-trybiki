@@ -8,8 +8,8 @@ public class Player : MonoBehaviour, IDamageable {
     [SerializeField] private int maxHp;
     [SerializeField] private int meleeDmg;
     [SerializeField] private int weaponDmg;
-    [SerializeField] private float meleeAttackCooldown;
-    [SerializeField] private float rangeAttackCooldown;
+    [SerializeField] private float meleeAttackCooldown = 1f;
+    [SerializeField] private float rangeAttackCooldown = 1f;
     [SerializeField] private float movementSpeed = 2f;
     [SerializeField] private int numberOfJumps = 1;
     [SerializeField] private float jumpForce = 2f;
