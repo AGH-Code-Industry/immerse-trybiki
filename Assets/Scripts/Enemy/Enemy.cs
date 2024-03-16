@@ -3,24 +3,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyMovement))]
-[RequireComponent(typeof(EnemyAttack))]
+public enum EnemyState {
+    Idle,
+    Following,
+    Attacking
+}
+
+// [RequireComponent(typeof(EnemyMovement))]
+// [RequireComponent(typeof(EnemyAttack))]
 public class Enemy : MonoBehaviour, IDamageable {
     [SerializeField] private EnemySO _enemySO;
     
     private EnemyMovement _movementModule;
     private EnemyAttack _enemyAttack;
 
+    public EnemyState EnemyState => _enemyState;
     public float HP => _hp;
     public float Speed => _speed;
     public AttackType AttackType => _attackType;
     public float AttackDamage => _attackDamage;
+    public float AttackDistance => _attackDistance;
+    public float AttackCooldown => _attackCooldown;
     
     private float _hp;
     private float _attackDamage;
     private float _timeMultiplayer;
     private AttackType _attackType;
     private float _speed;
+    private float _caughtDistance;
+    private float _attackDistance;
+    private float _attackCooldown;
+
+    private IDamageable _target;
+    private EnemyState _enemyState;
 
     protected virtual void Awake() {
         _enemyAttack = GetComponent<EnemyAttack>();
@@ -30,13 +45,44 @@ public class Enemy : MonoBehaviour, IDamageable {
         _timeMultiplayer = _enemySO.timeMultiplayer;
         _attackType = _enemySO.attackType;
         _speed = _enemySO.speed;
+        _caughtDistance = _enemySO.caughtDistance;
+        _attackDistance = _enemySO.attackDistance;
+        _attackCooldown = _enemySO.cooldown;
     }
 
-    protected virtual void TakeDamage(int amount) {
-        _hp -= amount;
-        if (_hp <= 0) {
-            Death();    
+    private void Update() {
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.instance.transform.position);
+        if (_target == null) {
+            if (distanceToPlayer < _caughtDistance || Math.Abs(_caughtDistance - (-1)) < 0.1f) {
+                CaughtPlayer();        
+            }
         }
+        else {
+            if (distanceToPlayer > _caughtDistance) {
+                LostPlayer();
+            }
+            else if (distanceToPlayer < _attackDistance) {
+                AttackPlayer();
+            }
+        }
+    }
+
+    private void CaughtPlayer() {
+        _movementModule.SetTarget(Player.instance);
+        _enemyState = EnemyState.Following;
+        _target = Player.instance;
+    }
+
+    private void LostPlayer() {
+        _movementModule.LostTarget();
+        _enemyState = EnemyState.Idle;
+        _target = null;
+    }
+
+    private void AttackPlayer() {
+        _enemyState = EnemyState.Attacking;
+        _enemyAttack.SetTarget(Player.instance);
+        _enemyAttack.Attack(Player.instance);
     }
 
     public void TakeDamage(float amount) {
@@ -58,22 +104,16 @@ public class Enemy : MonoBehaviour, IDamageable {
         _movementModule.Move();
     }
 
-    public void SetTarget(IDamageable target) {
+    private void SetTarget(IDamageable target) {
         _movementModule.SetTarget(target);
     }
 
-    public void Attack(IDamageable target) {
-        _enemyAttack.Attack(target);
-    }
-
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") {
-            // SetTarget(other.GetComponent<Player>());
+        if (other.CompareTag("Player")) {
+            IDamageable iDamageable = other.GetComponent<Player>();
+            SetTarget(iDamageable);
+            _enemyAttack.Attack(iDamageable);
         }
     }
-
-
-    // protected virtual void 
-    
     
 }
