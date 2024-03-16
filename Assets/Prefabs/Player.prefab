@@ -294,7 +294,7 @@ MonoBehaviour:
   meleeAttackCooldown: 1
   rangeAttackCooldown: 0
   movementSpeed: 2
-  numberOfJumps: 1
+  numberOfJumps: 3
   jumpForce: 5
   meleeAttackCollider: {fileID: 4937479014777829611}
 --- !u!114 &8626768568891006273
