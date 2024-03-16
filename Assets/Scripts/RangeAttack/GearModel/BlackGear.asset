@@ -9,15 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a943192cefda19a95ac04a8f922726f2, type: 3}
-  m_Name: Kamikaze
+  m_Script: {fileID: 11500000, guid: b1d87f6e91d639d4eba936700a382ec0, type: 3}
+  m_Name: BlackGear
   m_EditorClassIdentifier: 
-  enemyName: Hand
-  hp: 50
-  attackType: 0
-  attackDamage: 50
-  timeMultiplayer: 1.1
-  speed: 2
-  caughtDistance: 0
-  attackDistance: 1
-  cooldown: 0
+  gearName: Black Gear
+  gearDamage: 55
+  gearThrowForce: 15
+  gearLifeTime: 0
+  gearKnockback: 5
+  gearSpecialAction: {fileID: 3208991327231853958, guid: 4aeb012a69948ae4ea934fe9e8b34dcd, type: 3}
