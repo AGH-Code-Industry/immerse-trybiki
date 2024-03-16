@@ -17,8 +17,9 @@ MonoBehaviour:
   attackType: 1
   attackDamage: 10
   timeMultiplayer: 1.1
-  speed: 3
+  speed: 2
   caughtDistance: 1000
   attackDistance: 2
   aimingDistance: 0.5
   cooldown: 2
+  force: 7

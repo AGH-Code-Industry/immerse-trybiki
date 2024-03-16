@@ -11,8 +11,18 @@ public class Gear : MonoBehaviour
     [SerializeField]
     private GearSO gearSO;
     private Rigidbody2D rb;
+    
+    private float _timeToLive = 10f;
+
     private void Awake() {
         rb = transform.GetComponent<Rigidbody2D>();
+    }
+    
+    private void Update() {
+        _timeToLive -= Time.deltaTime;
+        if (_timeToLive < 0f) {
+            Destroy(gameObject);
+        }
     }
 
     public void ThrowGear(Vector3 player) {

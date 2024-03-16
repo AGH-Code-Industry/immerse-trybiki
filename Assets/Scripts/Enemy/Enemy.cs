@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     public float AttackDamage => _attackDamage;
     public float AttackDistance => _attackDistance;
     public float AttackCooldownMax => _attackCooldownMax;
+    public float AttackForce => _attackForce;
     
     private float _hpMax;
     private float _attackDamage;
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     private float _attackDistance;
     private float _attackCooldownMax;
     private float _aimingDistance;
+    private float _attackForce;
 
     private float _hp;
     private float _attackCooldown;
@@ -56,6 +58,7 @@ public class Enemy : MonoBehaviour, IDamageable {
         _attackDistance = _enemySO.attackDistance;
         _attackCooldownMax = _enemySO.cooldown;
         _aimingDistance = _enemySO.aimingDistance;
+        _attackForce = _enemySO.force;
         _attackCooldown = 0f;
     }
 
@@ -65,6 +68,7 @@ public class Enemy : MonoBehaviour, IDamageable {
 
     private void Update() {
         float distanceToPlayer = Vector2.Distance(transform.position, Player.instance.transform.position);
+        _attackCooldown -= Time.deltaTime;
         switch (_enemyState) {
             case EnemyState.Idle:
                 if (distanceToPlayer < _caughtDistance) {
@@ -85,7 +89,6 @@ public class Enemy : MonoBehaviour, IDamageable {
                     CaughtPlayer();
                     break;
                 }
-                _attackCooldown -= Time.deltaTime;
                 if (_attackCooldown <= 0f) {
                     AttackPlayer();
                 }
@@ -110,6 +113,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     }
 
     private void AttackPlayer() {
+        Debug.Log("Dupa");
         _enemyState = EnemyState.Attacking;
         _enemyAttack.SetTarget(Player.instance);
         _enemyAttack.Attack(Player.instance);
