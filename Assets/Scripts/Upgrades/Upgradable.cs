@@ -6,6 +6,7 @@ using UnityEngine;
 public class Upgradable : MonoBehaviour
 {
     protected PlayerStatistics playerStatistics;
+    protected UpgradeDisplay upgradeDisplay;
 
     public void Initialize()
     {
@@ -17,8 +18,14 @@ public class Upgradable : MonoBehaviour
         return;
     }
 
-    /*public bool CanBuy(int value)
+    public bool CanBuy()
     {
-        if (playerStatistics.)
-    }*/
+        if (playerStatistics.CurrentMoney <= upgradeDisplay.GetUpgradePrice()) return true;
+        return false;
+    }
+
+    public void Buy()
+    {
+        //todo: subtract player money
+    }
 }

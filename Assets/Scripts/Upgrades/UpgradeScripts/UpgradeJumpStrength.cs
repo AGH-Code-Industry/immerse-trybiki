@@ -6,6 +6,7 @@ public class UpgradeJumpStrength : Upgradable
 {
     override public void IncreaseStat(float value)
     {
+        if (!CanBuy()) return;
         playerStatistics.IncreaseJumpForce(value);
     }
 }

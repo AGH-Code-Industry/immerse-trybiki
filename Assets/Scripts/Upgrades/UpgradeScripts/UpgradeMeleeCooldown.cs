@@ -6,6 +6,7 @@ public class UpgradeMeleeCooldown : Upgradable
 {
     override public void IncreaseStat(float value)
     {
+        if (!CanBuy()) return;
         playerStatistics.DecreaseMeleeCooldown(value);
     }
 }
