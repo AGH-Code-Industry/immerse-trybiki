@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     private void Update() {
         float distanceToPlayer = Vector2.Distance(transform.position, Player.instance.transform.position);
         if (_target == null) {
-            if (distanceToPlayer < _caughtDistance) {
+            if (distanceToPlayer < _caughtDistance || Math.Abs(_caughtDistance - (-1)) < 0.1f) {
                 CaughtPlayer();        
             }
         }
