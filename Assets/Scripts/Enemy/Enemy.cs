@@ -6,7 +6,8 @@ using UnityEngine;
 public enum EnemyState {
     Idle,
     Following,
-    Attacking
+    Attacking,
+    Aiming
 }
 
 // [RequireComponent(typeof(EnemyMovement))]
@@ -23,7 +24,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     public AttackType AttackType => _attackType;
     public float AttackDamage => _attackDamage;
     public float AttackDistance => _attackDistance;
-    public float AttackCooldown => _attackCooldown;
+    public float AttackCooldownMax => _attackCooldownMax;
     
     private float _hp;
     private float _attackDamage;
@@ -32,6 +33,9 @@ public class Enemy : MonoBehaviour, IDamageable {
     private float _speed;
     private float _caughtDistance;
     private float _attackDistance;
+    private float _attackCooldownMax;
+    private float _aimingDistance;
+
     private float _attackCooldown;
 
     private IDamageable _target;
@@ -47,23 +51,45 @@ public class Enemy : MonoBehaviour, IDamageable {
         _speed = _enemySO.speed;
         _caughtDistance = _enemySO.caughtDistance;
         _attackDistance = _enemySO.attackDistance;
-        _attackCooldown = _enemySO.cooldown;
+        _attackCooldownMax = _enemySO.cooldown;
+        _aimingDistance = _enemySO.aimingDistance;
+        _attackCooldown = 0f;
+    }
+
+    private void Start() {
+        CaughtPlayer();
     }
 
     private void Update() {
         float distanceToPlayer = Vector2.Distance(transform.position, Player.instance.transform.position);
-        if (_target == null) {
-            if (distanceToPlayer < _caughtDistance || Math.Abs(_caughtDistance - (-1)) < 0.1f) {
-                CaughtPlayer();        
-            }
-        }
-        else {
-            if (distanceToPlayer > _caughtDistance) {
-                LostPlayer();
-            }
-            else if (distanceToPlayer < _attackDistance) {
-                AttackPlayer();
-            }
+        switch (_enemyState) {
+            case EnemyState.Idle:
+                if (distanceToPlayer < _caughtDistance) {
+                    CaughtPlayer();        
+                }
+                break;
+            case EnemyState.Following:
+                Debug.Log(distanceToPlayer);
+                if (distanceToPlayer > _caughtDistance) {
+                    LostPlayer();
+                }
+                if (distanceToPlayer < _attackDistance) {
+                    AimingPlayer();
+                }
+                break;
+            case EnemyState.Aiming:
+                if (distanceToPlayer > _attackDistance + _aimingDistance) {
+                    CaughtPlayer();
+                    break;
+                }
+                _attackCooldown -= Time.deltaTime;
+                if (_attackCooldown <= 0f) {
+                    AttackPlayer();
+                }
+                break;
+            case EnemyState.Attacking:
+                AimingPlayer();
+                break;
         }
     }
 
@@ -71,6 +97,7 @@ public class Enemy : MonoBehaviour, IDamageable {
         _movementModule.SetTarget(Player.instance);
         _enemyState = EnemyState.Following;
         _target = Player.instance;
+        _movementModule.StopAiming();
     }
 
     private void LostPlayer() {
@@ -83,6 +110,12 @@ public class Enemy : MonoBehaviour, IDamageable {
         _enemyState = EnemyState.Attacking;
         _enemyAttack.SetTarget(Player.instance);
         _enemyAttack.Attack(Player.instance);
+        _attackCooldown = _attackCooldownMax;
+    }
+
+    private void AimingPlayer() {
+        _enemyState = EnemyState.Aiming;
+        _movementModule.StartAiming(); 
     }
 
     public void TakeDamage(float amount) {

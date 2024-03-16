@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="enemy refactor">
+    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +30,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33e1115c0aa6443e9f22926e2547a5a9172a00/67/69a23b61/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,11 +37,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Kamikaze.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Walking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -126,6 +122,8 @@
       <updated>1710589266030</updated>
       <workItem from="1710589267273" duration="7079000" />
       <workItem from="1710596406080" duration="779000" />
+      <workItem from="1710612927228" duration="184000" />
+      <workItem from="1710613868840" duration="3289000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <option name="closed" value="true" />
@@ -186,6 +184,7 @@
     <MESSAGE value="restore" />
     <MESSAGE value="kamikaze work" />
     <MESSAGE value="enemy refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="enemy refactor" />
+    <MESSAGE value="flying" />
+    <option name="LAST_COMMIT_MESSAGE" value="flying" />
   </component>
 </project>
