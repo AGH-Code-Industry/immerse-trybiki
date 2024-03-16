@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     public AttackType AttackType => _attackType;
     public float AttackDamage => _attackDamage;
     public float AttackDistance => _attackDistance;
+    public float AttackCooldown => _attackCooldown;
     
     private float _hp;
     private float _attackDamage;
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     private float _speed;
     private float _caughtDistance;
     private float _attackDistance;
+    private float _attackCooldown;
 
     private IDamageable _target;
     private EnemyState _enemyState;
@@ -45,6 +47,7 @@ public class Enemy : MonoBehaviour, IDamageable {
         _speed = _enemySO.speed;
         _caughtDistance = _enemySO.caughtDistance;
         _attackDistance = _enemySO.attackDistance;
+        _attackCooldown = _enemySO.cooldown;
     }
 
     private void Update() {
