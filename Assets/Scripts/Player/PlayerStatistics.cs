@@ -36,4 +36,9 @@ public class PlayerStatistics : MonoBehaviour
             // todo: umieranie
         }
     }
+
+    public void IncreaseMovementSpeed(float value)
+    {
+        movementSpeed += value;
+    }
 }
