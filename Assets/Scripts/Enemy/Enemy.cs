@@ -48,12 +48,14 @@ public class Enemy : MonoBehaviour, IDamageable {
         _caughtDistance = _enemySO.caughtDistance;
         _attackDistance = _enemySO.attackDistance;
         _attackCooldown = _enemySO.cooldown;
+
+        CaughtPlayer();
     }
 
     private void Update() {
         float distanceToPlayer = Vector2.Distance(transform.position, Player.instance.transform.position);
         if (_target == null) {
-            if (distanceToPlayer < _caughtDistance || Math.Abs(_caughtDistance - (-1)) < 0.1f) {
+            if (distanceToPlayer < _caughtDistance) {
                 CaughtPlayer();        
             }
         }

@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : EnemyAttack
-{
+public class Weapon : EnemyAttack {
+    private IDamageable _target;
+    
     public override void SetTarget(IDamageable target) {
-        throw new System.NotImplementedException();
+        _target = target;
     }
 
     public override void Attack(IDamageable target) {
-        throw new System.NotImplementedException();
+        Debug.Log("Dupa");
     }
 
     public override void LostTarget() {
-        throw new System.NotImplementedException();
+        _target = null;
     }
 }

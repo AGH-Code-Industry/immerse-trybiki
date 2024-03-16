@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="enemy refactor">
+    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Weapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +126,7 @@
       <updated>1710589266030</updated>
       <workItem from="1710589267273" duration="7079000" />
       <workItem from="1710596406080" duration="779000" />
+      <workItem from="1710612927228" duration="184000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <option name="closed" value="true" />
