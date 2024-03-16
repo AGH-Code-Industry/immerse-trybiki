@@ -6,6 +6,7 @@ public class UpgradeMeleeWeaponDamage : Upgradable
 {
     override public void IncreaseStat(float value)
     {
+        if (!CanBuy()) return;
         playerStatistics.IncreaseMeleeWeaponDamage(value);
     }
 }
