@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour, IDamageable {
+    public static Player instance;
+    
     [SerializeField] private int maxHp;
     [SerializeField] private int meleeDmg;
     [SerializeField] private int weaponDmg;
@@ -17,6 +18,10 @@ public class Player : MonoBehaviour
     private Animator animator;
     private Vector2 movement;
     private Rigidbody2D rb;
+
+    private void Awake() {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -59,4 +64,12 @@ public class Player : MonoBehaviour
 
     public Vector2 GetMovement() { return movement; }
     public bool GetIsAttacking() { return isAttacking; }
+    
+    public void TakeDamage(float amount) {
+        Debug.Log("Dupa: " + amount);
+    }
+
+    public Transform GetTransform() {
+        return transform;
+    }
 }

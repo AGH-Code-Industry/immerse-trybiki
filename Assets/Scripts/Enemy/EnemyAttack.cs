@@ -10,4 +10,5 @@ public abstract class EnemyAttack : MonoBehaviour {
     }
     
     public abstract void Attack(IDamageable target);
+    public abstract void LostTarget();
 }

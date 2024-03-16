@@ -4,27 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Kamikaze : EnemyAttack {
-    private bool _checkDistance;
     
     private IDamageable _target;
 
-    protected override void Awake() {
-        base.Awake();
-        _checkDistance = false;
-    }
-
     public override void Attack(IDamageable target) {
-        _target = target;
-        _checkDistance = true;
+        Explode();
     }
 
-    private void Update() {
-        if (!_checkDistance)
-            return;
-
-        if (Vector2.Distance(transform.position, _target.GetTransform().position) < _baseEnemy.AttackDistance) {
-            Explode();
-        }
+    public override void LostTarget() {
+        _target = null;
     }
 
     private void Explode() {

@@ -13,4 +13,5 @@ public abstract class EnemyMovement : MonoBehaviour {
 
     public abstract void Move();
     public abstract void SetTarget(IDamageable target);
+    public abstract void LostTarget();
 }

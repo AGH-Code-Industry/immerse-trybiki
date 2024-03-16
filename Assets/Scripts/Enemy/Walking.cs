@@ -24,21 +24,22 @@ public class Walking : EnemyMovement {
         if (!_canMove)
             return;
         transform.position = Vector2.MoveTowards(transform.position, _target.position, _baseEnemy.Speed * Time.fixedDeltaTime);
-        if (Vector2.Distance(transform.position, _target.position) < Epsilon) {
-            _target = _points[++_targetPoint % _points.Count];
+        if (Vector2.Distance(transform.position, _target.position) < Epsilon && _baseEnemy.EnemyState != EnemyState.Attacking) {
+            SetPointTarget();
         }
     }
 
+    private void SetPointTarget() {
+        _target = _points[++_targetPoint % _points.Count];
+
+    }
+
     public override void SetTarget(IDamageable target) {
-        switch (_baseEnemy.AttackType) {
-            case AttackType.Kamikaze:
-                _target = target.GetTransform();
-                break;
-            case AttackType.Weapon:
-                ToggleMovementAbility(false);
-                _baseEnemy.Attack(target);
-                break;
-        }
+        _target = target.GetTransform();
+    }
+
+    public override void LostTarget() {
+        SetPointTarget();
     }
 
     private void ToggleMovementAbility(bool canMove) {

@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyState {
+    Idle,
+    Following,
+    Attacking
+}
+
 // [RequireComponent(typeof(EnemyMovement))]
 // [RequireComponent(typeof(EnemyAttack))]
 public class Enemy : MonoBehaviour, IDamageable {
@@ -11,6 +17,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     private EnemyMovement _movementModule;
     private EnemyAttack _enemyAttack;
 
+    public EnemyState EnemyState => _enemyState;
     public float HP => _hp;
     public float Speed => _speed;
     public AttackType AttackType => _attackType;
@@ -26,6 +33,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     private float _attackDistance;
 
     private IDamageable _target;
+    private EnemyState _enemyState;
 
     protected virtual void Awake() {
         _enemyAttack = GetComponent<EnemyAttack>();
@@ -40,16 +48,35 @@ public class Enemy : MonoBehaviour, IDamageable {
     }
 
     private void Update() {
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.instance.transform.position);
         if (_target == null) {
-            if (Vector2.Distance(transform.position))
+            if (distanceToPlayer < _caughtDistance) {
+                CaughtPlayer();        
+            }
+        }
+        else {
+            if (distanceToPlayer > _caughtDistance) {
+                LostPlayer();
+            }
+            else if (distanceToPlayer < _attackDistance) {
+                AttackPlayer();
+            }
         }
     }
 
-    protected virtual void TakeDamage(int amount) {
-        _hp -= amount;
-        if (_hp <= 0) {
-            Death();    
-        }
+    private void CaughtPlayer() {
+        _movementModule.SetTarget(Player.instance);
+        _enemyState = EnemyState.Following;
+    }
+
+    private void LostPlayer() {
+        _movementModule.LostTarget();
+        _enemyState = EnemyState.Idle;
+    }
+
+    private void AttackPlayer() {
+        _enemyState = EnemyState.Attacking;
+        _enemyAttack.Attack(Player.instance);
     }
 
     public void TakeDamage(float amount) {
@@ -75,20 +102,12 @@ public class Enemy : MonoBehaviour, IDamageable {
         _movementModule.SetTarget(target);
     }
 
-    public void Attack(IDamageable target) {
-        _enemyAttack.Attack(target);
-    }
-
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
-            IDamageable iDamageable = other.GetComponent<PlayerMovement>();
+            IDamageable iDamageable = other.GetComponent<Player>();
             SetTarget(iDamageable);
             _enemyAttack.Attack(iDamageable);
         }
     }
-
-
-    // protected virtual void 
-    
     
 }
