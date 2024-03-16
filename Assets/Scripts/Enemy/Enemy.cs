@@ -15,12 +15,17 @@ public class Enemy : MonoBehaviour, IDamageable {
     public float Speed => _speed;
     public AttackType AttackType => _attackType;
     public float AttackDamage => _attackDamage;
+    public float AttackDistance => _attackDistance;
     
     private float _hp;
     private float _attackDamage;
     private float _timeMultiplayer;
     private AttackType _attackType;
     private float _speed;
+    private float _caughtDistance;
+    private float _attackDistance;
+
+    private IDamageable _target;
 
     protected virtual void Awake() {
         _enemyAttack = GetComponent<EnemyAttack>();
@@ -30,6 +35,14 @@ public class Enemy : MonoBehaviour, IDamageable {
         _timeMultiplayer = _enemySO.timeMultiplayer;
         _attackType = _enemySO.attackType;
         _speed = _enemySO.speed;
+        _caughtDistance = _enemySO.caughtDistance;
+        _attackDistance = _enemySO.attackDistance;
+    }
+
+    private void Update() {
+        if (_target == null) {
+            if (Vector2.Distance(transform.position))
+        }
     }
 
     protected virtual void TakeDamage(int amount) {
@@ -68,8 +81,9 @@ public class Enemy : MonoBehaviour, IDamageable {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
-            SetTarget(other.GetComponent<PlayerMovement>());
-            _enemyAttack.Attack(other.GetComponent<PlayerMovement>());
+            IDamageable iDamageable = other.GetComponent<PlayerMovement>();
+            SetTarget(iDamageable);
+            _enemyAttack.Attack(iDamageable);
         }
     }
 

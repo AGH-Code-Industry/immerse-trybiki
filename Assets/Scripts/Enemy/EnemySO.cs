@@ -15,4 +15,7 @@ public class EnemySO : ScriptableObject {
     public int attackDamage;
     public float timeMultiplayer;
     public float speed;
+    public float caughtDistance;
+    public float attackDistance;
+
 }

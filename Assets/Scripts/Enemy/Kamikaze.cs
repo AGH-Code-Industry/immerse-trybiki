@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Kamikaze : EnemyAttack {
     private bool _checkDistance;
-
-    [SerializeField] private float _kamikazeDistance;
     
     private IDamageable _target;
 
@@ -24,7 +22,7 @@ public class Kamikaze : EnemyAttack {
         if (!_checkDistance)
             return;
 
-        if (Vector2.Distance(transform.position, _target.GetTransform().position) < _kamikazeDistance) {
+        if (Vector2.Distance(transform.position, _target.GetTransform().position) < _baseEnemy.AttackDistance) {
             Explode();
         }
     }
