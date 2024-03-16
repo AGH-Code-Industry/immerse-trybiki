@@ -13,18 +13,19 @@ public class Walking : EnemyMovement {
 
     private bool _canMove;
 
-    private void Awake() {
+    protected override void Awake() {
+        base.Awake();
         _canMove = true;
         _targetPoint = 0;
+        _target = _points[_targetPoint];
     }
 
     public override void Move() {
         if (!_canMove)
             return;
-        
-        transform.position = Vector2.MoveTowards(transform.position, _points[_targetPoint].position, _baseEnemy.Speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, _points[_targetPoint].position) < Epsilon) {
-            _target = _points[(_targetPoint + 1) % _points.Count];
+        transform.position = Vector2.MoveTowards(transform.position, _target.position, _baseEnemy.Speed * Time.fixedDeltaTime);
+        if (Vector2.Distance(transform.position, _target.position) < Epsilon) {
+            _target = _points[++_targetPoint % _points.Count];
         }
     }
 

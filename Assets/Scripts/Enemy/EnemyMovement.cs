@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class EnemyMovement : MonoBehaviour {
     protected Enemy _baseEnemy;
     
-    private void Awake() {
+    protected virtual void Awake() {
         _baseEnemy = GetComponent<Enemy>();
     }
 

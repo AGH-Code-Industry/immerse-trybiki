@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class EnemyAttack : MonoBehaviour {
     protected Enemy _baseEnemy;
     
-    private void Awake() {
+    protected virtual void Awake() {
         _baseEnemy = GetComponent<Enemy>();
     }
     

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDamageable
 {
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private float movementSpeed = 1f;
@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
     {
         movement = InputManager.navigationAxis;
         rb.velocity = new Vector2(-movement.x * movementSpeed * Time.deltaTime * 100, rb.velocity.y);
-        Debug.Log(movement);
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
         animator.SetBool("isJumping", !isGrounded);
@@ -77,5 +76,13 @@ public class PlayerMovement : MonoBehaviour
     public void SetMovementSpeed(float speed)
     {
         movementSpeed = speed;
+    }
+
+    public void TakeDamage(float amount) {
+        Debug.Log("Damage taken: " + amount);
+    }
+
+    public Transform GetTransform() {
+        return transform;
     }
 }

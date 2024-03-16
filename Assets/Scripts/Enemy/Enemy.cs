@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyMovement))]
-[RequireComponent(typeof(EnemyAttack))]
+// [RequireComponent(typeof(EnemyMovement))]
+// [RequireComponent(typeof(EnemyAttack))]
 public class Enemy : MonoBehaviour, IDamageable {
     [SerializeField] private EnemySO _enemySO;
     
@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour, IDamageable {
         _movementModule.Move();
     }
 
-    public void SetTarget(IDamageable target) {
+    private void SetTarget(IDamageable target) {
         _movementModule.SetTarget(target);
     }
 
@@ -67,8 +67,9 @@ public class Enemy : MonoBehaviour, IDamageable {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") {
-            // SetTarget(other.GetComponent<Player>());
+        if (other.CompareTag("Player")) {
+            SetTarget(other.GetComponent<PlayerMovement>());
+            _enemyAttack.Attack(other.GetComponent<PlayerMovement>());
         }
     }
 

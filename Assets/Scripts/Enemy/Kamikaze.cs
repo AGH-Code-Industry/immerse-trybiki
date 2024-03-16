@@ -10,7 +10,8 @@ public class Kamikaze : EnemyAttack {
     
     private IDamageable _target;
 
-    private void Awake() {
+    protected override void Awake() {
+        base.Awake();
         _checkDistance = false;
     }
 
@@ -23,7 +24,7 @@ public class Kamikaze : EnemyAttack {
         if (!_checkDistance)
             return;
 
-        if (Vector3.Distance(transform.position, _target.GetTransform().position) < _kamikazeDistance) {
+        if (Vector2.Distance(transform.position, _target.GetTransform().position) < _kamikazeDistance) {
             Explode();
         }
     }
