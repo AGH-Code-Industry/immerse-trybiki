@@ -200,9 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5f7f7c37db17b42aa5e2feb4b8faa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  movementSpeed: 2
-  numberOfJumps: 1
 --- !u!50 &8251233109748253530
 Rigidbody2D:
   serializedVersion: 4
@@ -291,4 +288,8 @@ MonoBehaviour:
   meleeDmg: 1
   weaponDmg: 1
   meleeAttackCooldown: 1
+  rangeAttackCooldown: 0
+  movementSpeed: 2
+  numberOfJumps: 1
+  jumpForce: 5
   meleeAttackCollider: {fileID: 4937479014777829611}
