@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9168f9f7291394f4ea01900bc6d80507, type: 3}
+  m_Name: MultipleJump
+  m_EditorClassIdentifier: 
+  upgradeName: Multiple jump
+  upgradeDescription: Add 1 to the number of jumps
+  upgradeUI: {fileID: 21300000, guid: 10aa3a116ac3b5b48a4baafd59720ea2, type: 3}
+  upgradePrice: 23
+  nextUpgradeIncreaseCost: 32
+  upgradable: {fileID: 867586414220417331, guid: 71a81f7c975aca049a7993f87bbd6a0c, type: 3}
+  upgradeValue: 1

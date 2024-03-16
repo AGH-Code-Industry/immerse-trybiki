@@ -47,4 +47,39 @@ public class PlayerStatistics : MonoBehaviour
             // todo: umieranie
         }
     }
+
+    public void IncreaseMovementSpeed(float value)
+    {
+        movementSpeed += value;
+    }
+
+    public void IncreaseJumpForce(float value)
+    {
+        jumpForce += value;
+    }
+
+    public void IncreaseNumberOfJumps(int value)
+    {
+        numberOfJumps += value;
+    }
+
+    public void IncreaseMeleeWeaponDamage(float value)
+    {
+        meleeDmg += value;
+    }
+
+    public void IncreaseMaxPlayerHp(int value)
+    {
+        maxHp = value;
+    }
+
+    public void DecreaseMeleeCooldown(float value)
+    {
+        meleeAttackCooldown -= value;
+    }
+
+    public void DecreaseRangeCooldown(float value)
+    {
+        rangeAttackCooldown -= value;
+    }
 }
