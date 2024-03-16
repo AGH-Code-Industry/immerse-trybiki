@@ -8,7 +8,8 @@ public static class InputManager
 {
     public static CustomInput input;
     public static Vector2 navigationAxis => input.Player.Movement.ReadValue<Vector2>();
-    public static Vector2 MousePosition => GetMouseWorldPosition();
+    public static Vector2 MousePosition => InputManager.input.Player.Mouse.ReadValue<Vector2>();
+    public static Vector2 MouseWorldPosition => GetMouseWorldPosition();
 
     static InputManager()
     {

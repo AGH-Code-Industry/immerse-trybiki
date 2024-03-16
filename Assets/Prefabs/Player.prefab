@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2767302161450093884}
   - component: {fileID: 8626768568891006273}
   - component: {fileID: 5331918266561465511}
+  - component: {fileID: 5553567451266998074}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -287,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 1
+  currHp: 0
   meleeDmg: 1
   weaponDmg: 1
   meleeAttackCooldown: 1
@@ -319,5 +321,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87db46d820a943445a7ce77d7b0b4616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5553567451266998074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7676764898422499463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed0fa3f85b76f0439483adc03bf6411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -6,15 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerGearsManager))]
 public class Player : MonoBehaviour, IDamageable {
     public static Player instance;
-    [SerializeField] private int maxHp;
-    [SerializeField] private int meleeDmg;
-    [SerializeField] private int weaponDmg;
-    [SerializeField] private float meleeAttackCooldown = 1f;
-    [SerializeField] private float rangeAttackCooldown = 1f;
-    [SerializeField] private float movementSpeed = 2f;
-    [SerializeField] private int numberOfJumps = 1;
-    [SerializeField] private float jumpForce = 2f;
-
 
     [SerializeField] private BoxCollider2D meleeAttackCollider;
 
@@ -28,6 +19,8 @@ public class Player : MonoBehaviour, IDamageable {
     private bool isGrounded = true;
     private int jumpsLeft;
 
+    private PlayerStatistics stats;
+
     private void Awake() {
         instance = this;
     }
@@ -40,7 +33,9 @@ public class Player : MonoBehaviour, IDamageable {
         animations = GetComponent<PlayerAnimations>();
         gearsManager = GetComponent<PlayerGearsManager>();
         gearsManager.ResetGearSetup();
-        jumpsLeft = numberOfJumps;
+        
+        stats = GetComponent<PlayerStatistics>();
+        jumpsLeft = stats.GetNumberOfJumps();
     }
 
     private void FixedUpdate()
@@ -55,7 +50,7 @@ public class Player : MonoBehaviour, IDamageable {
         if (Mathf.Abs(rb.velocity.y) < 0.01f)
         {
             isGrounded = true;
-            jumpsLeft = numberOfJumps;
+            jumpsLeft = stats.GetNumberOfJumps();
             canJump = true;
         }
 
@@ -126,8 +121,9 @@ public class Player : MonoBehaviour, IDamageable {
     public Vector2 GetMovement() { return movement; }
     public Vector2 GetVelocity() { return rb.velocity; }
     public bool GetIsGrounded() {  return isGrounded; }
+
     public void TakeDamage(float amount) {
-        Debug.Log("Dupa: " + amount);
+        stats.TakeDamage(amount);
     }
 
     public Transform GetTransform() {
