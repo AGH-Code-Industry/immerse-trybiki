@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, IDamageable
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private float movementSpeed = 1f;
@@ -12,8 +12,9 @@ public class PlayerMovement : MonoBehaviour, IDamageable
     private Animator animator;
     private Rigidbody2D rb;
     private Vector2 movement;
-    private int jumpsLeft;
+    private Player player;
 
+    private int jumpsLeft;
     private bool isGrounded = true;
     private bool isFacingRight = false;
     private bool canJump = false;
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpsLeft = numberOfJumps;
+        player = GetComponent<Player>();
     }
 
     void Update()
@@ -45,11 +47,11 @@ public class PlayerMovement : MonoBehaviour, IDamageable
 
     private void FixedUpdate()
     {
-        movement = InputManager.navigationAxis;
-        rb.velocity = new Vector2(-movement.x * movementSpeed * Time.deltaTime * 100, rb.velocity.y);
+        Vector2 movement = player.GetMovement();
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
         animator.SetBool("isJumping", !isGrounded);
+        animator.SetBool("isAttacking", player.GetIsAttacking());
     }
 
     void FlipSprite()
@@ -66,23 +68,5 @@ public class PlayerMovement : MonoBehaviour, IDamageable
             jumpsLeft = numberOfJumps;
             canJump = true;
         }
-    }
-
-    public void AddJump()
-    {
-        numberOfJumps += 1;
-    }
-
-    public void SetMovementSpeed(float speed)
-    {
-        movementSpeed = speed;
-    }
-
-    public void TakeDamage(float amount) {
-        Debug.Log("Damage taken: " + amount);
-    }
-
-    public Transform GetTransform() {
-        return transform;
     }
 }
