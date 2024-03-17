@@ -24,6 +24,10 @@ namespace RangeAttack {
                 GameObject gearObject = Instantiate(gear, transform.position, Quaternion.identity);
                 gearObject.GetComponent<Gear>().ThrowGear(player);
             }
+
+            // if (!_gearQueue.HasAnyGear() && PlayerStatistics.instance.CurrentMoney < 20) {
+            //     GameEnd.instance.LoseGame();
+            // }
         }
     
         public void PickupGear(GameObject gear) {

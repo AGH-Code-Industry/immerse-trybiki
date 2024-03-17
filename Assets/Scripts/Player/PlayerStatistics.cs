@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,8 +6,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.Rendering.DebugUI;
 
-public class PlayerStatistics : MonoBehaviour
-{
+public class PlayerStatistics : MonoBehaviour {
+    public static PlayerStatistics instance;
     [SerializeField] private float maxHp = 10f;
     [SerializeField] private float currHp;
     [SerializeField] private int numberOfJumps = 1;
@@ -28,6 +29,11 @@ public class PlayerStatistics : MonoBehaviour
             currentMoney = value;
         }
     }
+
+    private void Awake() {
+        instance = this;
+    }
+
     public float MeleeAttackCooldown => meleeAttackCooldown;
     public float RangeAttackCooldown => rangeAttackCooldown;
     public float MovementSpeed => movementSpeed;
