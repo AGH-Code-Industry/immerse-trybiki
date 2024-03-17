@@ -13,10 +13,22 @@ public class EnemySpawners : MonoBehaviour {
 
     private List<Enemy> _spawnedEnemys = new();
 
+    [SerializeField] private int EnemyOnStart;
+    [SerializeField] private int WaveMultiplayer;
+    [SerializeField] private float pauseTimeBeetweenWave;
+    [SerializeField] private float startDelay;
+    private int enemyCount;
+
     private void Awake() {
         instance = this;
         _spawners = GetComponentsInChildren<EnemySpawner>();
-        SpawnEnemys(2);
+        enemyCount = EnemyOnStart;
+        StartCoroutine(StartGameDelay(startDelay));
+    }
+
+    private IEnumerator StartGameDelay(float delay) {
+        yield return new WaitForSeconds(delay);
+        SpawnEnemys(EnemyOnStart);
     }
 
     public void RemoveEnemy(Enemy enemy) {
@@ -27,8 +39,18 @@ public class EnemySpawners : MonoBehaviour {
     }
 
     private void EndWave() {
-        Debug.Log("Killed all");
-        SpawnEnemys(2);
+        StartCoroutine(NextWave(pauseTimeBeetweenWave));
+    }
+
+    private IEnumerator NextWave(float time) {
+        yield return new WaitForSeconds(time);
+        StartNextWave();
+    }
+
+    private void StartNextWave() {
+        enemyCount *= WaveMultiplayer;
+        Debug.Log("Enemy count: " + enemyCount);
+        SpawnEnemys(enemyCount);
     }
 
     public void SpawnEnemys(int count) {
