@@ -14,10 +14,10 @@ public class EnemySpawners : MonoBehaviour {
     private List<Enemy> _spawnedEnemys = new();
 
     [SerializeField] private int EnemyOnStart;
-    [SerializeField] private int WaveMultiplayer;
+    [SerializeField] private float WaveMultiplayer;
     [SerializeField] private float pauseTimeBeetweenWave;
     [SerializeField] private float startDelay;
-    private int enemyCount;
+    private float enemyCount;
 
     private void Awake() {
         instance = this;
@@ -50,7 +50,7 @@ public class EnemySpawners : MonoBehaviour {
     private void StartNextWave() {
         enemyCount *= WaveMultiplayer;
         Debug.Log("Enemy count: " + enemyCount);
-        SpawnEnemys(enemyCount);
+        SpawnEnemys(Mathf.FloorToInt(enemyCount));
     }
 
     public void SpawnEnemys(int count) {
