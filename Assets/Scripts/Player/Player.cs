@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Map;
 using RangeAttack;
 using UnityEngine;
 using UnityEngine.Events;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour, IDamageable {
     {
         InputManager.input.Player.MeleeAttack.performed += TriggerMeleeAttack;
         InputManager.input.Player.RangeAttack.performed += TriggerRangeAttack;
+        InputManager.input.Player.RangeAttack.performed += Turn;
         rb = GetComponent<Rigidbody2D>();
         animations = GetComponent<PlayerAnimations>();
         gearsManager = GetComponent<PlayerGearsManager>();
@@ -40,6 +42,11 @@ public class Player : MonoBehaviour, IDamageable {
         
         stats = GetComponent<PlayerStatistics>();
         jumpsLeft = stats.NumberOfJumps;
+    }
+
+    private void Turn(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        FindAnyObjectByType<MapTurningManager>().DesiredRotationPercentage = 0.5f;
     }
 
     private void FixedUpdate()

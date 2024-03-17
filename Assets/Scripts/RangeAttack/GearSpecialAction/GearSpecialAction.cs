@@ -1,5 +1,6 @@
-﻿
+﻿#if UNITY_EDITOR
 using UnityEditor.Timeline.Actions;
+#endif
 using UnityEngine;
 
 namespace RangeAttack.GearSpecialAction {
