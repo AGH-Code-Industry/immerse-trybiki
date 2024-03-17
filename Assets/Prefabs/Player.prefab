@@ -437,13 +437,14 @@ MonoBehaviour:
   maxHp: 150
   currHp: 0
   numberOfJumps: 1
-  meleeDmg: 25
+  meleeDmg: 0
   weaponDmg: 0
   meleeAttackCooldown: 1
   rangeAttackCooldown: 1
   movementSpeed: 2
   jumpForce: 5
   currentMoney: 2
+  hpBar: {fileID: 0}
   moneyText: {fileID: 0}
 --- !u!1001 &3477005599339462194
 PrefabInstance:
