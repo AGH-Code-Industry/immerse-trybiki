@@ -21,6 +21,6 @@ public class Kamikaze : EnemyAttack {
 
     private void Explode() {
         _target.TakeDamage(_baseEnemy.AttackDamage);
-        Destroy(gameObject);
+        _baseEnemy.Death();
     }
 }

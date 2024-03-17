@@ -18,6 +18,10 @@ MonoBehaviour:
   attackDamage: 50
   timeMultiplayer: 1.1
   speed: 2
-  caughtDistance: 0
+  caughtDistance: 3
   attackDistance: 1
+  aimingDistance: 0
   cooldown: 0
+  force: 0
+  minimumGearsOnDeath: 3
+  maximumGearsOnDeath: 5

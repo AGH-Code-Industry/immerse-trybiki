@@ -20,5 +20,6 @@ public class EnemySO : ScriptableObject {
     public float aimingDistance;
     public float cooldown;
     public float force;
-
+    public float minimumGearsOnDeath;
+    public float maximumGearsOnDeath;
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Walking : EnemyMovement {
-    private const float Epsilon = 0.1f;
+    private const float Epsilon = 0.5f;
     
     [SerializeField] private List<Transform> _points;
     
@@ -17,12 +17,25 @@ public class Walking : EnemyMovement {
         base.Awake();
         _canMove = true;
         _targetPoint = 0;
+        bool find = false;
+        RaycastHit2D[] recastHit2D = Physics2D.RaycastAll(transform.position, Vector2.down);
+        foreach (RaycastHit2D recastHit in recastHit2D) {
+            if (recastHit.transform.gameObject.TryGetComponent(out Platform platform)) {
+                _points = platform._points;
+                find = true;
+                break;
+            }
+        }
+        if (!find) {
+            Destroy(gameObject);
+        }
         _target = _points[_targetPoint];
     }
 
     public override void Move() {
         if (!_canMove)
             return;
+        
         transform.position = Vector2.MoveTowards(transform.position, _target.position, _baseEnemy.Speed * Time.fixedDeltaTime);
         if (Vector2.Distance(transform.position, _target.position) < Epsilon && _baseEnemy.EnemyState != EnemyState.Attacking) {
             SetPointTarget();
@@ -40,9 +53,5 @@ public class Walking : EnemyMovement {
 
     public override void LostTarget() {
         SetPointTarget();
-    }
-
-    private void ToggleMovementAbility(bool canMove) {
-        _canMove = canMove;
     }
 }

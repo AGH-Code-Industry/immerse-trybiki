@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum EnemyState {
     Idle,
@@ -18,6 +19,8 @@ public class Enemy : MonoBehaviour, IDamageable {
     
     private EnemyMovement _movementModule;
     private EnemyAttack _enemyAttack;
+
+    [SerializeField] private GameObject _gearsOnDeath;
 
     public EnemyState EnemyState => _enemyState;
     public float HP => _hpMax;
@@ -38,6 +41,8 @@ public class Enemy : MonoBehaviour, IDamageable {
     private float _attackCooldownMax;
     private float _aimingDistance;
     private float _attackForce;
+    private float _minimumGearsOnDeath;
+    private float _maximumGearsOnDeath;
 
     private float _hp;
     private float _attackCooldown;
@@ -59,6 +64,8 @@ public class Enemy : MonoBehaviour, IDamageable {
         _attackCooldownMax = _enemySO.cooldown;
         _aimingDistance = _enemySO.aimingDistance;
         _attackForce = _enemySO.force;
+        _minimumGearsOnDeath = _enemySO.minimumGearsOnDeath;
+        _maximumGearsOnDeath = _enemySO.maximumGearsOnDeath;
         _attackCooldown = 0f;
     }
 
@@ -76,7 +83,6 @@ public class Enemy : MonoBehaviour, IDamageable {
                 }
                 break;
             case EnemyState.Following:
-                Debug.Log(distanceToPlayer);
                 if (distanceToPlayer > _caughtDistance) {
                     LostPlayer();
                 }
@@ -137,7 +143,12 @@ public class Enemy : MonoBehaviour, IDamageable {
         return transform;
     }
 
-    private void Death() {
+    public void Death() {
+        int amount = Random.Range(Mathf.FloorToInt(_minimumGearsOnDeath), Mathf.FloorToInt(_maximumGearsOnDeath));
+        for (int i = 0; i <= amount; i++) {
+            Rigidbody2D rigidbody2D = Instantiate(_gearsOnDeath, transform.position, transform.rotation).GetComponent<Rigidbody2D>();
+            rigidbody2D.AddForce(Vector2.up * Random.Range(2f, 4f) + Vector2.left * Random.Range(0f, 1f) + Vector2.right * Random.Range(0f, 1f), ForceMode2D.Impulse);
+        }
         Destroy(gameObject);
     }
 
