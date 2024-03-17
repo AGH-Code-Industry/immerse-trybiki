@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Jump strength
   upgradeDescription: Increase your jump strength
-  upgradeUI: {fileID: 21300000, guid: 0869b1e96aac6d34cb086976dc7af826, type: 3}
+  upgradeUI: {fileID: 21300000, guid: f021ced7e0fc9f9439d02ebeda804c55, type: 3}
   upgradePrice: 40
   nextUpgradeIncreaseCost: 30
   upgradable: {fileID: 867586414220417331, guid: ab35f39e4b3f71044b48946ca41d21b5, type: 3}
