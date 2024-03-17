@@ -8,7 +8,7 @@ public class GearQueue : MonoBehaviour
     private UiGearQueueDisplay uiGearQueueDisplay;
     private Queue<GameObject> _gearQueue = new Queue<GameObject>();
 
-    private void Start() {
+    private void Awake() {
         uiGearQueueDisplay = FindObjectOfType<UiGearQueueDisplay>();
     }
 

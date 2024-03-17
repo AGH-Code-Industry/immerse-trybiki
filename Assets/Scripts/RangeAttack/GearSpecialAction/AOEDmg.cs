@@ -20,7 +20,6 @@ public class AOEDmg : GearSpecialAction
         foreach (var collider2D in Physics2D.OverlapCircleAll(transform.position, radius)) {
             if (collider2D.TryGetComponent(typeof(IDamageable), out var damageable) && !collider2D.CompareTag("Player") ) {
                 ((IDamageable)damageable).TakeDamage(gearSO.gearDamage);
-                _particleSystem.Play();
             }
         }
     }
