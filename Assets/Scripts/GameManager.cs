@@ -31,6 +31,6 @@ public class GameManager : MonoBehaviour {
     }
 
     public void OnPlayerDeath() {
-        ReloadScene();
+        // ReloadScene();
     }
 }
