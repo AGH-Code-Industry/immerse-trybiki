@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7777815894978712597}
   - component: {fileID: 2264724538395136626}
   - component: {fileID: 1219558083842929897}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Kamikaze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,6 +216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealtBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4790368844689091600, guid: a3b311b5f1557eb5cb9c84c41ad1c8d7, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6946165076947843688, guid: a3b311b5f1557eb5cb9c84c41ad1c8d7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -295,6 +299,14 @@ PrefabInstance:
     - target: {fileID: 6946165076947843688, guid: a3b311b5f1557eb5cb9c84c41ad1c8d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690182197684804783, guid: a3b311b5f1557eb5cb9c84c41ad1c8d7, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859368505714925048, guid: a3b311b5f1557eb5cb9c84c41ad1c8d7, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
