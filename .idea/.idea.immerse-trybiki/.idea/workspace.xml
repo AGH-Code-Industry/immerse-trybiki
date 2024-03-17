@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="s">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpecialGears/BlackGear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SpecialGears/BlackGear.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpecialGears/RedGear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SpecialGears/RedGear.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpecialGears/YellowGear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SpecialGears/YellowGear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/GearCollect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GearCollect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/Gear.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/Gear.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearModel/GearSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearModel/GearSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearModel/RedGear.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearModel/RedGear.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearModel/YellowGear.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearModel/YellowGear.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearQueue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/PlayerGearsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/PlayerGearsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +28,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f28850ff3af04455b9b92943e26f4e9a1fe00/74/eea327a0/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Prefabs/Enemys/GearOnDeath.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Prefabs/SpecialGears/BlackGear.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
@@ -81,6 +74,8 @@
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerArrow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerArrows.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/RangeAttack/GearSpecialAction/AOEDmg.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/RangeAttack/GearSpecialAction/AOEStun.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HealthBarUI.cs" root0="FORCE_HIGHLIGHTING" />
