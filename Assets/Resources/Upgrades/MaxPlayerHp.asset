@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: Max hp
   upgradeDescription: Increase your max hp
   upgradeUI: {fileID: 21300000, guid: 6648dc0cac1c49943b8c31bdbf7d037d, type: 3}
-  upgradePrice: 11
-  nextUpgradeIncreaseCost: 80
+  upgradePrice: 20
+  nextUpgradeIncreaseCost: 10
   upgradable: {fileID: 867586414220417331, guid: 1daf082dc42441c45af7d5675b3df381, type: 3}
   upgradeValue: 10
