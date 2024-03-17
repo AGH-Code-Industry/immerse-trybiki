@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="wave spawner">
+    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="s">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Machine/MachineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Machine/MachineManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,67 +21,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33e1115c0aa6443e9f22926e2547a5a9172a00/67/69a23b61/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f28850ff3af04455b9b92943e26f4e9a1fe00/74/eea327a0/Physics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b4/393a8c0f/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Prefabs/Enemys/GearOnDeath.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Prefabs/SpecialGears/BlackGear.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/EnemySpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/EnemySpawners.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/EnemySpawners.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawners.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/GearByEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Kamikaze.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Walking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Machine/MachineManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Map.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Map.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/MapTurningManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/Platform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/GearCollect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerArrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerArrows.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/RangeAttack/GearSpecialAction/AOEDmg.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/RangeAttack/GearSpecialAction/AOEStun.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearSpecialAction/AOEDmg.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HealthBarUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/UpgradeScripts/UpgradeBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UiGearQueueDisplay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -97,28 +57,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;enemy&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/kacper/Desktop/Code_Industry/GameJam/2Immerse&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/kacper/Desktop/Code_Industry/GameJam/2Immerse",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/home/kacper/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/home/kacper/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/home/kacper/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/home/kacper/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/home/kacper/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/home/kacper/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Build/Game.x86_64" />
@@ -283,23 +243,7 @@
       <option name="project" value="LOCAL" />
       <updated>1710674619914</updated>
     </task>
-    <task id="LOCAL-00014" summary="arrow">
-      <option name="closed" value="true" />
-      <created>1710680312742</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1710680312742</updated>
-    </task>
-    <task id="LOCAL-00015" summary="wave spawner">
-      <option name="closed" value="true" />
-      <created>1710681174326</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1710681174326</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,8 +278,6 @@
     <MESSAGE value="collecting gears" />
     <MESSAGE value="fix build" />
     <MESSAGE value="s" />
-    <MESSAGE value="arrow" />
-    <MESSAGE value="wave spawner" />
-    <option name="LAST_COMMIT_MESSAGE" value="wave spawner" />
+    <option name="LAST_COMMIT_MESSAGE" value="s" />
   </component>
 </project>
