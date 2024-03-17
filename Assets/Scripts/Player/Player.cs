@@ -10,6 +10,7 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour, IDamageable {
     public static Player instance;
 
+    [SerializeField] private BoxCollider2D playerCollider;
     [SerializeField] private BoxCollider2D meleeAttackCollider;
 
     private bool isAttackingMelee;
@@ -25,11 +26,13 @@ public class Player : MonoBehaviour, IDamageable {
     private PlayerStatistics stats;
 
     public UnityEvent onPlayerDead;
+    private GameObject currentOneWayPlatform;
 
     private void Awake() {
         instance = this;
         
         rb = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Start()
@@ -74,6 +77,11 @@ public class Player : MonoBehaviour, IDamageable {
             canJump = false;
             animations.Jump();
         }
+
+        if (movement.y < 0 && isGrounded && currentOneWayPlatform)
+        {
+            StartCoroutine(DisableCollision());
+        }
     }
     void TriggerMeleeAttack(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
@@ -113,6 +121,22 @@ public class Player : MonoBehaviour, IDamageable {
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            currentOneWayPlatform = collision.gameObject;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            currentOneWayPlatform = null;
+        }
+    }
+
     IEnumerator AttackMeleeCooldown(float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -142,5 +166,14 @@ public class Player : MonoBehaviour, IDamageable {
     public Transform GetTransform() {
         //Debug.Log("tranform");
         return transform;
+    }
+
+    private IEnumerator DisableCollision()
+    {
+        BoxCollider2D platformCollider = currentOneWayPlatform.GetComponent<BoxCollider2D>();
+
+        Physics2D.IgnoreCollision(playerCollider, platformCollider);
+        yield return new WaitForSeconds(1f);
+        Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
     }
 }

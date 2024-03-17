@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Melee attack cooldown
   upgradeDescription: Increase melee attack speed
-  upgradeUI: {fileID: 21300000, guid: 82c57d9b5988103439b27094403ad698, type: 3}
+  upgradeUI: {fileID: 21300000, guid: 0cf6022d9bcfd2241854287ec49a5137, type: 3}
   upgradePrice: 22
   nextUpgradeIncreaseCost: 33
   upgradable: {fileID: 867586414220417331, guid: 50044b431a72bf5408cde2f7b2c19b8d, type: 3}

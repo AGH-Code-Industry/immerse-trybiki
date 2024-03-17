@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Melee weapon damage
   upgradeDescription: Increase melee weapon damage
-  upgradeUI: {fileID: 21300000, guid: 7ee76aa704bf5874e9c6b413729f72fe, type: 3}
+  upgradeUI: {fileID: 21300000, guid: 0cf6022d9bcfd2241854287ec49a5137, type: 3}
   upgradePrice: 66
   nextUpgradeIncreaseCost: 55
   upgradable: {fileID: 867586414220417331, guid: 82be08ae4b4ee5f4991fe65f35c1920a, type: 3}

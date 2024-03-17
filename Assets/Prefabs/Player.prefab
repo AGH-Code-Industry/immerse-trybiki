@@ -437,13 +437,13 @@ MonoBehaviour:
   maxHp: 150
   currHp: 0
   numberOfJumps: 1
-  meleeDmg: 0
-  weaponDmg: 0
+  meleeDmg: 10
+  weaponDmg: 10
   meleeAttackCooldown: 1
   rangeAttackCooldown: 1
   movementSpeed: 2
   jumpForce: 5
-  currentMoney: 2
+  currentMoney: 0
   hpBar: {fileID: 0}
   moneyText: {fileID: 0}
 --- !u!1001 &3477005599339462194
