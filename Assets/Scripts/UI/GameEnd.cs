@@ -31,6 +31,6 @@ public class GameEnd : MonoBehaviour {
     public void WinGame() {
         finishGame.SetActive(true);
         GameManager.instance.StopCountTime();
-        timetext.text = "You finished in: " + GameManager.instance.time + " seconds";
+        timetext.text = "You finished in: " + Mathf.Floor(GameManager.instance.time) + " seconds";
     }
 }
