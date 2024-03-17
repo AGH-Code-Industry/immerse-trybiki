@@ -11,7 +11,7 @@ namespace RangeAttack {
         [SerializeField]
         private int maxGears = 6;
 
-        private void Start() {
+        private void Awake() {
             _gearQueue = GetComponent<GearQueue>();
         }
 
