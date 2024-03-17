@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
                 }
                 break;
             case EnemyState.Aiming:
-                // _rigidbody2D.velocity = Vector2.zero;
+                _rigidbody2D.velocity = Vector2.zero;
                 if (distanceToPlayer > _attackDistance + _aimingDistance) {
                     CaughtPlayer();
                     break;

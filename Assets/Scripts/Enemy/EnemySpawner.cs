@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public enum EnemyType {
+    flying,
+    kamikaze
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+public class EnemySpawner : MonoBehaviour {
+    [SerializeField] private List<GameObject> _types;
+    
+    public void SpawnEnemy(EnemyType typeToSpawn) {
+        Instantiate(_types[(int)typeToSpawn], transform.position, transform.rotation);
     }
 }

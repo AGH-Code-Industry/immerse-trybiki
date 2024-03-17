@@ -15,10 +15,9 @@ public class Flying : EnemyMovement {
     public override void Move() {
         if (_aiming || stunned)
             return;
-        
-        // Debug.Log(_target.position);
-        // _rigidbody2D.MovePosition(_target.position * (Time.fixedDeltaTime * _baseEnemy.Speed));
-        transform.position = Vector2.MoveTowards(transform.position, _target.position, _baseEnemy.Speed * Time.fixedDeltaTime) + Vector2.up * (Time.fixedDeltaTime * Random.Range(-0.5f, 0.5f));
+
+        transform.eulerAngles = new Vector3(0f, _target.transform.position.x - transform.position.x > 0 ? 0 : 180, 0f);
+        _rigidbody2D.MovePosition(transform.position + (_target.position - transform.position )* (Time.fixedDeltaTime * _baseEnemy.Speed));
     }
 
     public override void SetTarget(IDamageable target) {
