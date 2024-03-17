@@ -7,6 +7,7 @@ public class UpgradeMaxPlayerHp : Upgradable
     override public void IncreaseStat(float value)
     {
         if (!CanBuy()) return;
+        Buy();
         playerStatistics.IncreaseMaxPlayerHp((int)value);
     }
 }

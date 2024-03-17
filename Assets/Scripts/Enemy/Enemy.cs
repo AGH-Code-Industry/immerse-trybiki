@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour, IDamageable {
                 }
                 break;
             case EnemyState.Following:
-                Debug.Log(distanceToPlayer);
+                //Debug.Log(distanceToPlayer);
                 if (distanceToPlayer > _caughtDistance) {
                     LostPlayer();
                 }
