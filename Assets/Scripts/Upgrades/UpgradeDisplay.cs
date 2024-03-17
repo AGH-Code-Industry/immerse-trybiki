@@ -16,10 +16,12 @@ public class UpgradeDisplay : MonoBehaviour
 
     private int level = 0;
     private UpgradeSO upgradeSO;
+    private UpgradeManager upgradeManager;
 
-    public void SetUpgradeSO(UpgradeSO upgradeSO)
+    public void Initialize(UpgradeSO upgradeSO)
     {
         this.upgradeSO = upgradeSO;
+        upgradeManager = FindAnyObjectByType<UpgradeManager>();
     }
 
     public void DisplayUpgradeStats()
@@ -35,6 +37,7 @@ public class UpgradeDisplay : MonoBehaviour
     public void LevelUp()
     {
         level += 1;
+        upgradeManager.RefreshShop();
     }
 
     public int GetUpgradePrice()
@@ -45,5 +48,16 @@ public class UpgradeDisplay : MonoBehaviour
     public UpgradeSO GetUpgradeSO()
     {
         return upgradeSO;
+    }
+
+    public void CheckIfCanBuy()
+    {
+        if (upgradeSO.upgradable.GetComponent<Upgradable>().CanBuy())
+        {
+            upgradeButton.interactable = true;
+        } else
+        {
+            upgradeButton.interactable = false;
+        }
     }
 }

@@ -29,6 +29,7 @@ public class Shop : MonoBehaviour
 
         if (playerNeerShop)
         {
+            GetComponent<UpgradeManager>().RefreshShop();
             InputManager.input.Player.MeleeAttack.Disable();
             playerInShop = true;
             shopUI.SetActive(true);

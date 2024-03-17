@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerStatistics : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class PlayerStatistics : MonoBehaviour
     private void Start()
     {
         currHp = maxHp;
+        moneyText.text = currentMoney.ToString();
     }
 
     public void TakeDamage(float amount)
