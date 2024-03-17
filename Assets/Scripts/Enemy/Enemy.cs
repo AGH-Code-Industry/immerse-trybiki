@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
     private EnemyMovement _movementModule;
     private EnemyAttack _enemyAttack;
 
+    private Rigidbody2D _rigidbody2D;
+    
     [SerializeField] private GameObject _gearsOnDeath;
 
     public EnemyState EnemyState => _enemyState;
@@ -51,6 +53,8 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
     private EnemyState _enemyState;
 
     protected virtual void Awake() {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        
         _enemyAttack = GetComponent<EnemyAttack>();
         _movementModule = GetComponent<EnemyMovement>();
         _hpMax = _enemySO.hp;
@@ -91,6 +95,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
                 }
                 break;
             case EnemyState.Aiming:
+                _rigidbody2D.velocity = Vector2.zero;
                 if (distanceToPlayer > _attackDistance + _aimingDistance) {
                     CaughtPlayer();
                     break;
@@ -119,7 +124,6 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
     }
 
     private void AttackPlayer() {
-        Debug.Log("Dupa");
         _enemyState = EnemyState.Attacking;
         _enemyAttack.SetTarget(Player.instance);
         _enemyAttack.Attack(Player.instance);
@@ -156,21 +160,10 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
         _movementModule.Move();
     }
 
-    private void SetTarget(IDamageable target) {
-        _movementModule.SetTarget(target);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
-            IDamageable iDamageable = other.GetComponent<Player>();
-            SetTarget(iDamageable);
-            _enemyAttack.Attack(iDamageable);
-        }
-    }
-
     public void StunFor(float seconds) {
         _movementModule.Stun();
         _enemyAttack.Stun();
+        StartCoroutine(Stunned(seconds));
     }
 
     IEnumerator Stunned(float time) {

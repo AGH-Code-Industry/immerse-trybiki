@@ -10,7 +10,7 @@ namespace RangeAttack.GearSpecialAction {
         }
 
         public override void Invoke() {
-            _particleSystem.Play();
+            // _particleSystem.Play();
             return;
         }
     }

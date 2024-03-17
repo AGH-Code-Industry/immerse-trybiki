@@ -34,10 +34,10 @@ public class Gear : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other) {
         Component damageable = null;
         if (other.TryGetComponent(typeof(IDamageable), out damageable) && !other.CompareTag("Player") ) {
-            Debug.Log("DUPA!!!!!!");
             ((IDamageable)damageable).TakeDamage(gearSO.gearDamage);
             var effect = Instantiate(gearSO.gearSpecialAction, transform.position, Quaternion.identity);
             effect.GetComponent<GearSpecialAction>().Invoke();
+            Destroy(gameObject);
         }
     }
 }

@@ -27,7 +27,6 @@ public class GearByEnemy : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log(other.tag);
         Component damageable = null;
         if (other.TryGetComponent(typeof(IDamageable), out damageable) && !other.CompareTag("Enemy") ){
             ((IDamageable)damageable).TakeDamage(_damage);

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1
+  stunTime: 3
   gearSO: {fileID: 11400000, guid: de3f63d50d99e454aa22b4a08b95a289, type: 2}
 --- !u!1001 &6477054308983501316
 PrefabInstance:

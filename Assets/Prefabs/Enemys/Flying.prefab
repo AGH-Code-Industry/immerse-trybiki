@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemySO: {fileID: 11400000, guid: 6635d949b02295d2383d2d3a43a7999e, type: 2}
   _healthBarUI: {fileID: 1047595352778556627}
+  _gearsOnDeath: {fileID: 6222424175077194658, guid: 01549d7df6caff5539fcfcae9fec641e, type: 3}
 --- !u!50 &2818994309200592783
 Rigidbody2D:
   serializedVersion: 4

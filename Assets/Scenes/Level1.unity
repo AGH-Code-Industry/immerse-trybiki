@@ -228,13 +228,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flying
       objectReference: {fileID: 0}
+    - target: {fileID: 2818994309200592783, guid: d00589cd82ee11f859c1ff50a13da3cd, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5653838428347229756, guid: d00589cd82ee11f859c1ff50a13da3cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8928375
+      value: 6.243
       objectReference: {fileID: 0}
     - target: {fileID: 5653838428347229756, guid: d00589cd82ee11f859c1ff50a13da3cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3529863
+      value: 4.062
       objectReference: {fileID: 0}
     - target: {fileID: 5653838428347229756, guid: d00589cd82ee11f859c1ff50a13da3cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -569,6 +573,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5553567451266998074, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
+      propertyPath: maxHp
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553567451266998074, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 1348990804}
@@ -577,33 +585,13 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8626768568891006273, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
-      propertyPath: initialGearList.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626768568891006273, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
       propertyPath: initialGearList.Array.data[0]
       value: 
-      objectReference: {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
+      objectReference: {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
     - target: {fileID: 8626768568891006273, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
       propertyPath: initialGearList.Array.data[1]
       value: 
-      objectReference: {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
-    - target: {fileID: 8626768568891006273, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
-      propertyPath: initialGearList.Array.data[2]
-      value: 
-      objectReference: {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
-    - target: {fileID: 8626768568891006273, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
-      propertyPath: initialGearList.Array.data[3]
-      value: 
-      objectReference: {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
-    - target: {fileID: 8626768568891006273, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
-      propertyPath: initialGearList.Array.data[4]
-      value: 
-      objectReference: {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
-    - target: {fileID: 8626768568891006273, guid: 0f7f6456e293d674192c23ae44ac24a1, type: 3}
-      propertyPath: initialGearList.Array.data[5]
-      value: 
-      objectReference: {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
+      objectReference: {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

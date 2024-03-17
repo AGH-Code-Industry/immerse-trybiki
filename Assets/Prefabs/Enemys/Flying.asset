@@ -23,3 +23,5 @@ MonoBehaviour:
   aimingDistance: 0.5
   cooldown: 2
   force: 7
+  minimumGearsOnDeath: 2
+  maximumGearsOnDeath: 5
