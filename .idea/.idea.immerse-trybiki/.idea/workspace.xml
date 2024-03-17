@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="Droping gears on death">
+    <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="ds">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Flying.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/GearByEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/GearByEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/Gear.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/Gear.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearSpecialAction/AOEStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearSpecialAction/AOEStun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearSpecialAction/DoNothing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearSpecialAction/DoNothing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearSpecialAction/Prefab/AOEStun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeAttack/GearSpecialAction/Prefab/AOEStun.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +31,17 @@
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/GearByEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Kamikaze.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Walking.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,13 +49,16 @@
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Machine/MachineManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Map.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Map.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/MapTurningManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/Platform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/RangeAttack/GearSpecialAction/AOEStun.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HealthBarUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UiGearQueueDisplay.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -209,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710661423193</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ds">
+      <option name="closed" value="true" />
+      <created>1710665622524</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710665622524</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +251,7 @@
     <MESSAGE value="hpbar" />
     <MESSAGE value="flyer" />
     <MESSAGE value="Droping gears on death" />
-    <option name="LAST_COMMIT_MESSAGE" value="Droping gears on death" />
+    <MESSAGE value="ds" />
+    <option name="LAST_COMMIT_MESSAGE" value="ds" />
   </component>
 </project>
