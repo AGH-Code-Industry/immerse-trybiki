@@ -13,10 +13,11 @@ public class Flying : EnemyMovement {
     }
 
     public override void Move() {
+        transform.eulerAngles = new Vector3(0f, _target.transform.position.x - transform.position.x > 0 ? 0 : 180, 0f);
+        
         if (_aiming || stunned)
             return;
 
-        transform.eulerAngles = new Vector3(0f, _target.transform.position.x - transform.position.x > 0 ? 0 : 180, 0f);
         _rigidbody2D.MovePosition(transform.position + (_target.position - transform.position )* (Time.fixedDeltaTime * _baseEnemy.Speed));
     }
 

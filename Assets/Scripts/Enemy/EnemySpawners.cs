@@ -11,14 +11,29 @@ public class EnemySpawners : MonoBehaviour {
 
     [SerializeField][Range(0f, 100f)]private float _percentForFlying;
 
+    private List<Enemy> _spawnedEnemys = new();
+
     private void Awake() {
         instance = this;
         _spawners = GetComponentsInChildren<EnemySpawner>();
+        SpawnEnemys(2);
+    }
+
+    public void RemoveEnemy(Enemy enemy) {
+        _spawnedEnemys.Remove(enemy);
+        if (_spawnedEnemys.Count == 0) {
+            EndWave();
+        }
+    }
+
+    private void EndWave() {
+        Debug.Log("Killed all");
+        SpawnEnemys(2);
     }
 
     public void SpawnEnemys(int count) {
-        for (int i = 0; i <= count; i++) {
-            _spawners[Random.Range(0, _spawners.Length)].SpawnEnemy(Random.Range(0f, 100f) < _percentForFlying ? EnemyType.flying : EnemyType.kamikaze);
+        for (int i = 0; i < count; i++) {
+            _spawnedEnemys.Add(_spawners[Random.Range(0, _spawners.Length)].SpawnEnemy(Random.Range(0f, 100f) < _percentForFlying ? EnemyType.flying : EnemyType.kamikaze));
         }
     }
     
