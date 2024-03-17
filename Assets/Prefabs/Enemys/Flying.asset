@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flying
   m_EditorClassIdentifier: 
   enemyName: Flying
-  hp: 1
+  hp: 30
   attackType: 1
   attackDamage: 10
   timeMultiplayer: 1.1

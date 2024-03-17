@@ -400,11 +400,11 @@ MonoBehaviour:
   _gearQueue: {fileID: 0}
   initialGearList:
   - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
-  - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
-  - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
-  - {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
   - {fileID: 2790965165420466040, guid: 90aa12051ab08a741a6c6983716935eb, type: 3}
+  - {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
   - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
+  - {fileID: 2790965165420466040, guid: 90aa12051ab08a741a6c6983716935eb, type: 3}
+  - {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
   maxGears: 6
 --- !u!114 &5331918266561465511
 MonoBehaviour:
@@ -437,12 +437,12 @@ MonoBehaviour:
   maxHp: 150
   currHp: 0
   numberOfJumps: 1
-  meleeDmg: 10
-  weaponDmg: 10
+  meleeDmg: 25
+  weaponDmg: 5
   meleeAttackCooldown: 1
   rangeAttackCooldown: 1
   movementSpeed: 2
-  jumpForce: 5
+  jumpForce: 7
   currentMoney: 0
   hpBar: {fileID: 0}
   moneyText: {fileID: 0}
