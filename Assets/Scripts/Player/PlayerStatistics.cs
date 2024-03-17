@@ -96,4 +96,10 @@ public class PlayerStatistics : MonoBehaviour {
     {
         rangeAttackCooldown -= value;
     }
+    public void IncreaseHp(float value)
+    {
+        currHp += value;
+        currHp = Math.Min(currHp, maxHp);
+        hpBar.SetFill(currHp / maxHp);
+    }
 }

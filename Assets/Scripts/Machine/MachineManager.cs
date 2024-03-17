@@ -9,6 +9,8 @@ public class MachineManager : MonoBehaviour {
     public static MachineManager instance;
     [SerializeField]
     private int currentGears;
+    [SerializeField]
+    private UIProgressManager uiProgressManager;
     public int CurrentGears {
         get => currentGears;
         set {
@@ -49,6 +51,8 @@ public class MachineManager : MonoBehaviour {
     }
 
     private void UpdateMapTurning() {
+        Debug.Log("Current gears: " + currentGears + "  " + (float) currentGears / maxGears);
         mapTurningManager.DesiredRotationPercentage = (float)currentGears / maxGears;
+        uiProgressManager.CurrentProgress = (float) currentGears / maxGears;
     }
 }
