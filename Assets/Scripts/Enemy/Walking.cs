@@ -33,7 +33,7 @@ public class Walking : EnemyMovement {
     }
 
     public override void Move() {
-        if (!_canMove)
+        if (!_canMove || stunned)
             return;
         
         transform.position = Vector2.MoveTowards(transform.position, _target.position, _baseEnemy.Speed * Time.fixedDeltaTime);

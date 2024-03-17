@@ -8,6 +8,9 @@ public class Kamikaze : EnemyAttack {
     private IDamageable _target;
     
     public override void Attack(IDamageable target) {
+        if (stunned)
+            return;
+        
         Explode();
     }
     

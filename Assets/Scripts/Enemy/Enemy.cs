@@ -13,7 +13,7 @@ public enum EnemyState {
 
 // [RequireComponent(typeof(EnemyMovement))]
 // [RequireComponent(typeof(EnemyAttack))]
-public class Enemy : MonoBehaviour, IDamageable {
+public class Enemy : MonoBehaviour, IDamageable, IStunable {
     [SerializeField] private EnemySO _enemySO;
     [SerializeField] private HealthBarUI _healthBarUI;
     
@@ -167,5 +167,19 @@ public class Enemy : MonoBehaviour, IDamageable {
             _enemyAttack.Attack(iDamageable);
         }
     }
-    
+
+    public void StunFor(float seconds) {
+        _movementModule.Stun();
+        _enemyAttack.Stun();
+    }
+
+    IEnumerator Stunned(float time) {
+        yield return new WaitForSeconds(time);
+        UnStun();
+    }
+
+    private void UnStun() {
+        _movementModule.UnStun();
+        _enemyAttack.UnStun();
+    }
 }

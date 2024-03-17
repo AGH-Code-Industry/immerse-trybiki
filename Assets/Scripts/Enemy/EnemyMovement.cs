@@ -9,6 +9,7 @@ public abstract class EnemyMovement : MonoBehaviour {
     protected Enemy _baseEnemy;
 
     protected bool _aiming;
+    protected bool stunned;
     
     protected virtual void Awake() {
         _baseEnemy = GetComponent<Enemy>();
@@ -24,5 +25,13 @@ public abstract class EnemyMovement : MonoBehaviour {
 
     public void StopAiming() {
         _aiming = false;
+    }
+    
+    public void Stun() {
+        stunned = true;
+    }
+
+    public void UnStun() {
+        stunned = false;
     }
 }

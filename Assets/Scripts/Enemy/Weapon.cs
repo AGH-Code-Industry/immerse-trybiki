@@ -11,6 +11,8 @@ public class Weapon : EnemyAttack {
     }
 
     public override void Attack(IDamageable target) {
+        if (stunned)
+            return;
         Instantiate(_gearPrefab, transform.position, transform.rotation).GetComponent<GearByEnemy>().ThrowGear(_target.GetTransform().position, _baseEnemy.AttackForce, _baseEnemy.AttackDamage);
     }
 
