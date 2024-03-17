@@ -18,3 +18,4 @@ MonoBehaviour:
   gearLifeTime: 0
   gearKnockback: 5
   gearSpecialAction: {fileID: 3208991327231853958, guid: fe931775b3348134092a3b19f0fd7646, type: 3}
+  GearType: 1

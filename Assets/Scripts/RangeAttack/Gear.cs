@@ -4,25 +4,22 @@ using System.Collections.Generic;
 using RangeAttack.GearSpecialAction;
 using UnityEngine;
 
+public enum GearType {
+    Black,
+    Red,
+    Yellow
+}
+
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 public class Gear : MonoBehaviour
 {
     [SerializeField]
-    private GearSO gearSO;
+    public GearSO gearSO;
     private Rigidbody2D rb;
     
-    private float _timeToLive = 10f;
-
     private void Awake() {
         rb = transform.GetComponent<Rigidbody2D>();
-    }
-    
-    private void Update() {
-        _timeToLive -= Time.deltaTime;
-        if (_timeToLive < 0f) {
-            Destroy(gameObject);
-        }
     }
 
     public void ThrowGear(Vector3 player) {
@@ -37,7 +34,9 @@ public class Gear : MonoBehaviour
             ((IDamageable)damageable).TakeDamage(gearSO.gearDamage);
             var effect = Instantiate(gearSO.gearSpecialAction, transform.position, Quaternion.identity);
             effect.GetComponent<GearSpecialAction>().Invoke();
-            Destroy(gameObject);
+            rb.velocity = Vector2.zero;
+            GetComponent<BoxCollider2D>().isTrigger = false;
+            transform.tag = "GearPickUp";
         }
     }
 }
