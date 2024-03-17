@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Range attack cooldown
   upgradeDescription: Increase your range attack speed
-  upgradeUI: {fileID: 21300000, guid: 1fa7ccda57ea232489a40129d872165b, type: 3}
+  upgradeUI: {fileID: 21300000, guid: 7830b48d71cd8a14698c87d414d43c46, type: 3}
   upgradePrice: 65
   nextUpgradeIncreaseCost: 56
   upgradable: {fileID: 867586414220417331, guid: e045c5bc6e4226045ba54d638f4d59f6, type: 3}

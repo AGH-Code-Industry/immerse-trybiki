@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Movement speed
   upgradeDescription: Increse your movement speed
-  upgradeUI: {fileID: 21300000, guid: 3229de7050762dd43b44a5f747269f11, type: 3}
+  upgradeUI: {fileID: 21300000, guid: 928cff5d68d2c924a9df035b84bba38a, type: 3}
   upgradePrice: 10
   nextUpgradeIncreaseCost: 30
   upgradable: {fileID: 867586414220417331, guid: a9f7b4ea1b4525a408c56225343882c3, type: 3}
