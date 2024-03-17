@@ -442,7 +442,7 @@ MonoBehaviour:
   meleeAttackCooldown: 1
   rangeAttackCooldown: 1
   movementSpeed: 2
-  jumpForce: 7
+  jumpForce: 6
   currentMoney: 0
   hpBar: {fileID: 0}
   moneyText: {fileID: 0}
