@@ -28,7 +28,7 @@ public class UpgradeManager : MonoBehaviour
         foreach (UpgradeSO up in upgrades)
         {
             GameObject go = Instantiate(upgradeGO, content);
-            up.upgradable.GetComponent<Upgradable>().Initialize();
+            up.upgradable.GetComponent<Upgradable>().Initialize(go.GetComponent<UpgradeDisplay>());
             go.GetComponent<UpgradeDisplay>().SetUpgradeSO(up);
             go.GetComponent<UpgradeDisplay>().DisplayUpgradeStats();
         }

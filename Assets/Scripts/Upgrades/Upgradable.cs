@@ -8,9 +8,10 @@ public class Upgradable : MonoBehaviour
     protected PlayerStatistics playerStatistics;
     protected UpgradeDisplay upgradeDisplay;
 
-    public void Initialize()
+    public void Initialize(UpgradeDisplay ud)
     {
         playerStatistics = FindAnyObjectByType<Player>().GetComponent<PlayerStatistics>();
+        upgradeDisplay = ud;
     }
 
     virtual public void IncreaseStat(float value)
@@ -20,12 +21,14 @@ public class Upgradable : MonoBehaviour
 
     public bool CanBuy()
     {
-        if (playerStatistics.CurrentMoney <= upgradeDisplay.GetUpgradePrice()) return true;
-        return false;
+        if (playerStatistics.CurrentMoney <= upgradeDisplay.GetUpgradePrice()) return false;
+        return true;
     }
 
     public void Buy()
     {
-        //todo: subtract player money
+        playerStatistics.CurrentMoney -= upgradeDisplay.GetUpgradePrice();
+        upgradeDisplay.LevelUp();
+        upgradeDisplay.DisplayUpgradeStats();
     }
 }

@@ -7,6 +7,7 @@ public class UpgradeMultipleJump : Upgradable
     override public void IncreaseStat(float value)
     {
         if (!CanBuy()) return;
+        Buy();
         playerStatistics.IncreaseNumberOfJumps((int)value);
     }
 }

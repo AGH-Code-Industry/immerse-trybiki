@@ -7,6 +7,7 @@ public class UpgradeMovementSpeed : Upgradable
     override public void IncreaseStat(float value)
     {
         if (!CanBuy()) return;
+        Buy();
         playerStatistics.IncreaseMovementSpeed(value);
     }
 }
