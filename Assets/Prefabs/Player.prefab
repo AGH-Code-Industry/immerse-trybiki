@@ -1,5 +1,85 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1641221295970713388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2436174105727626441}
+  - component: {fileID: 3913806598936322340}
+  - component: {fileID: 5224326200526451970}
+  m_Layer: 0
+  m_Name: CollectableMagnet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2436174105727626441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641221295970713388}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.027, y: -0.635, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1454714047989850712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &3913806598936322340
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641221295970713388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.14
+--- !u!114 &5224326200526451970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641221295970713388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f3ad9e0bd6774a89d0a1e454ec8b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6595337228695740205
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +196,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8269330375921205583}
+  - {fileID: 2436174105727626441}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &24134311159219098
@@ -290,7 +371,19 @@ MonoBehaviour:
   meleeAttackCollider: {fileID: 4937479014777829611}
   onPlayerDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnPlayerDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8626768568891006273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,8 +397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialGearList:
-  - {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
-  - {fileID: 2790965165420466040, guid: 90aa12051ab08a741a6c6983716935eb, type: 3}
+  - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
+  - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
   - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
   - {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
   - {fileID: 2790965165420466040, guid: 90aa12051ab08a741a6c6983716935eb, type: 3}
@@ -335,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed0fa3f85b76f0439483adc03bf6411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 10
+  maxHp: 150
   currHp: 0
   numberOfJumps: 1
   meleeDmg: 0
