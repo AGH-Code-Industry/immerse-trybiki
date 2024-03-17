@@ -10,7 +10,7 @@ public class PlayerAnimations : MonoBehaviour
     private Vector2 movement;
     private Player player;
 
-    private bool isFacingRight = false;
+    private bool isFacingRight = true;
 
     private void Start()
     {
