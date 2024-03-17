@@ -62,6 +62,15 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ShopInteraction"",
+                    ""type"": ""Button"",
+                    ""id"": ""72b640af-ddf1-4aad-8dfb-e1935ea6d6d7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,6 +161,17 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""action"": ""Mouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51955c4b-3c81-49f4-aea2-8dfc1b75e5a9"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShopInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +184,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         m_Player_MeleeAttack = m_Player.FindAction("MeleeAttack", throwIfNotFound: true);
         m_Player_RangeAttack = m_Player.FindAction("RangeAttack", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
+        m_Player_ShopInteraction = m_Player.FindAction("ShopInteraction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -229,6 +250,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_MeleeAttack;
     private readonly InputAction m_Player_RangeAttack;
     private readonly InputAction m_Player_Mouse;
+    private readonly InputAction m_Player_ShopInteraction;
     public struct PlayerActions
     {
         private @CustomInput m_Wrapper;
@@ -237,6 +259,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         public InputAction @MeleeAttack => m_Wrapper.m_Player_MeleeAttack;
         public InputAction @RangeAttack => m_Wrapper.m_Player_RangeAttack;
         public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
+        public InputAction @ShopInteraction => m_Wrapper.m_Player_ShopInteraction;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +281,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Mouse.started += instance.OnMouse;
             @Mouse.performed += instance.OnMouse;
             @Mouse.canceled += instance.OnMouse;
+            @ShopInteraction.started += instance.OnShopInteraction;
+            @ShopInteraction.performed += instance.OnShopInteraction;
+            @ShopInteraction.canceled += instance.OnShopInteraction;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -274,6 +300,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Mouse.started -= instance.OnMouse;
             @Mouse.performed -= instance.OnMouse;
             @Mouse.canceled -= instance.OnMouse;
+            @ShopInteraction.started -= instance.OnShopInteraction;
+            @ShopInteraction.performed -= instance.OnShopInteraction;
+            @ShopInteraction.canceled -= instance.OnShopInteraction;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -297,5 +326,6 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         void OnMeleeAttack(InputAction.CallbackContext context);
         void OnRangeAttack(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
+        void OnShopInteraction(InputAction.CallbackContext context);
     }
 }

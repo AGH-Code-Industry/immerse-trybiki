@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using RangeAttack;
 using UnityEngine;
+using UnityEngine.Events;
+
 [RequireComponent(typeof(PlayerGearsManager))]
 public class Player : MonoBehaviour, IDamageable {
     public static Player instance;
@@ -20,6 +22,8 @@ public class Player : MonoBehaviour, IDamageable {
     private int jumpsLeft;
 
     private PlayerStatistics stats;
+
+    public UnityEvent onPlayerDead;
 
     private void Awake() {
         instance = this;
@@ -127,6 +131,7 @@ public class Player : MonoBehaviour, IDamageable {
     }
 
     public Transform GetTransform() {
+        //Debug.Log("tranform");
         return transform;
     }
 }

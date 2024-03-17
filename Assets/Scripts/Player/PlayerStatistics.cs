@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerStatistics : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class PlayerStatistics : MonoBehaviour
     [SerializeField] private float movementSpeed = 2f;
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private int currentMoney = 2;
-    
+
     [SerializeField] private TextMeshProUGUI moneyText;
 
     public int CurrentMoney {
@@ -37,6 +39,7 @@ public class PlayerStatistics : MonoBehaviour
     private void Start()
     {
         currHp = maxHp;
+        moneyText.text = currentMoney.ToString();
     }
 
     public void TakeDamage(float amount)
@@ -45,6 +48,42 @@ public class PlayerStatistics : MonoBehaviour
         if (currHp <= 0)
         {
             // todo: umieranie
+            GetComponent<Player>().onPlayerDead?.Invoke();
         }
+    }
+
+    public void IncreaseMovementSpeed(float value)
+    {
+        movementSpeed += value;
+    }
+
+    public void IncreaseJumpForce(float value)
+    {
+        jumpForce += value;
+    }
+
+    public void IncreaseNumberOfJumps(int value)
+    {
+        numberOfJumps += value;
+    }
+
+    public void IncreaseMeleeWeaponDamage(float value)
+    {
+        meleeDmg += value;
+    }
+
+    public void IncreaseMaxPlayerHp(int value)
+    {
+        maxHp = value;
+    }
+
+    public void DecreaseMeleeCooldown(float value)
+    {
+        meleeAttackCooldown -= value;
+    }
+
+    public void DecreaseRangeCooldown(float value)
+    {
+        rangeAttackCooldown -= value;
     }
 }
