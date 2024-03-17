@@ -34,7 +34,7 @@ public class Player : MonoBehaviour, IDamageable {
     {
         InputManager.input.Player.MeleeAttack.performed += TriggerMeleeAttack;
         InputManager.input.Player.RangeAttack.performed += TriggerRangeAttack;
-        InputManager.input.Player.RangeAttack.performed += Turn;
+        // InputManager.input.Player.RangeAttack.performed += Turn;
         rb = GetComponent<Rigidbody2D>();
         animations = GetComponent<PlayerAnimations>();
         gearsManager = GetComponent<PlayerGearsManager>();
