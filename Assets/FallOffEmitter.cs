@@ -14,5 +14,8 @@ public class FallOffEmitter : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) {
             onFallOff.Invoke();
         }
+        if (other.gameObject.TryGetComponent<Enemy>(out var enemy)) {
+            enemy.Death();
+        }
     }
 }

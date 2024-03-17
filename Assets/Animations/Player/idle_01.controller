@@ -34,15 +34,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 8bff456569c4d5b4ea69e035ba2fe661, type: 2}
-    m_Threshold: -1
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: xVelocity
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 2b22ad52c19779b49b172ab95be32b9d, type: 2}
+    m_Motion: {fileID: 7400000, guid: 0bc1eb6186c11594e8f5e462f0e2c5de, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -98,11 +90,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.5
+  m_TransitionDuration: 0.12268682
+  m_TransitionOffset: 0.65909547
+  m_ExitTime: 0.8549051
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -123,9 +115,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.108333334
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.7499999
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -256,7 +248,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RangeAttack
-  m_Speed: 1
+  m_Speed: 10
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5726939971401381520}
@@ -270,12 +262,12 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 80d79cf82ff84bc4390f6ddc2eac32c7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5daec31b462077a479d6fb0f6ec2fb54, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_TimeParameter: xVelocity
 --- !u!1101 &1206342187333776517
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -293,7 +285,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.011310395
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -309,7 +301,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AttackMelee
-  m_Speed: 1
+  m_Speed: 10
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7922251995246614561}
@@ -323,7 +315,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 399ec617ee31f804dba2dba180718d30, type: 2}
+  m_Motion: {fileID: 7400000, guid: fd0ac363aa79cfa4faa124b7456fff6a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -346,11 +338,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.5
+  m_TransitionDuration: 0.09629817
+  m_TransitionOffset: 0.19373581
+  m_ExitTime: 0.8874712
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -398,7 +390,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.010306835
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -415,7 +407,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: c1c43538a99aa6f40904db79326d1e7c, type: 2}
+    m_Motion: {fileID: 7400000, guid: 3f6b6f9788a9cf8478f8a5a73e3ce971, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -423,7 +415,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: a2b05f7208229ad4ca2cd3565676330e, type: 2}
+    m_Motion: {fileID: 7400000, guid: 7ab8cc49e1791024d8d3bcc0fb2c369c, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -445,7 +437,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Movement
-  m_Speed: 1
+  m_Speed: 10
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

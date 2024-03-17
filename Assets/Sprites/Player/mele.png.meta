@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 391a4278b1623994db77ad393654ca26
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mele_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 391
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b374b6901e734b478b422b49e9a2d3b
+      internalID: -523733767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_1
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 386
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14399e6b7bc2f304f82fca4008f8ccf7
+      internalID: -2093554693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_2
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 393
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d3487b5f9471f43bbd84d2c6b35732
+      internalID: -1350250677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_3
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 0
+        width: 390
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f4ed45ad210fa459dd931db7a47935
+      internalID: -1189934801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_4
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 0
+        width: 396
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad8af27a853cee4884cc704bc284f9d
+      internalID: 45700712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_5
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 0
+        width: 405
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24994f933051feb43ae801aa06293476
+      internalID: 1151546638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_6
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 0
+        width: 427
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04c36d5c99f19345b81518d0e53a69e
+      internalID: 815137978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_7
+      rect:
+        serializedVersion: 2
+        x: 2996
+        y: 0
+        width: 454
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4619a80d6ba4e88428d6d7ca4468c7d6
+      internalID: -1795792100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_8
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 0
+        width: 484
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff132c461b01b340a8b39612e8392cb
+      internalID: 1684365694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_9
+      rect:
+        serializedVersion: 2
+        x: 3983
+        y: 0
+        width: 476
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5900b6adeb78344980d8df7413bd2d
+      internalID: -1937367253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_10
+      rect:
+        serializedVersion: 2
+        x: 4486
+        y: 0
+        width: 482
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f4fe805148e4442aff545545d8416b
+      internalID: -1706171649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_11
+      rect:
+        serializedVersion: 2
+        x: 4992
+        y: 0
+        width: 486
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02525160bc431c449e6199aac44541d
+      internalID: 831343832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_12
+      rect:
+        serializedVersion: 2
+        x: 5500
+        y: 0
+        width: 462
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e0e59b69829a54689e6c051bf7afc4
+      internalID: 1806295935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_13
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 0
+        width: 525
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab02a933297e5e84a963d27a422ad622
+      internalID: 1381646742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_14
+      rect:
+        serializedVersion: 2
+        x: 6522
+        y: 0
+        width: 525
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84391a0d5b0f22842957c855f88e0090
+      internalID: 1409232992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_15
+      rect:
+        serializedVersion: 2
+        x: 7069
+        y: 0
+        width: 577
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31702b6a78478de44a369d63a7789215
+      internalID: -2043331586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_16
+      rect:
+        serializedVersion: 2
+        x: 7661
+        y: 0
+        width: 653
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932195f4adc06d84f9eb9159fcc89e3a
+      internalID: 537699955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_17
+      rect:
+        serializedVersion: 2
+        x: 8334
+        y: 0
+        width: 744
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee0f545c80b1b247944d8f54a4c4e7b
+      internalID: -2102903326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_18
+      rect:
+        serializedVersion: 2
+        x: 9105
+        y: 0
+        width: 812
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c58e48b516246541892c63f8773d208
+      internalID: -1216270151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_19
+      rect:
+        serializedVersion: 2
+        x: 9932
+        y: 0
+        width: 906
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b589877c3fae4449fdd5ba344e082b
+      internalID: 1513576853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_20
+      rect:
+        serializedVersion: 2
+        x: 10855
+        y: 0
+        width: 953
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b14b6fce719d054f8cb41f94d703c25
+      internalID: -2114294995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_21
+      rect:
+        serializedVersion: 2
+        x: 11825
+        y: 0
+        width: 965
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d6980d788a2de4c958d6ab6cb23dc0
+      internalID: -1732175343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_22
+      rect:
+        serializedVersion: 2
+        x: 12822
+        y: 0
+        width: 908
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65720352602a624aa4b3725ef10c8c5
+      internalID: -1502002855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_23
+      rect:
+        serializedVersion: 2
+        x: 13747
+        y: 0
+        width: 816
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e98436826991734fb46e9f1365fd2d0
+      internalID: 1665424794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_24
+      rect:
+        serializedVersion: 2
+        x: 14585
+        y: 0
+        width: 660
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f3ff17f6f0c2346a09715fd0b8238d
+      internalID: -1321370058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_25
+      rect:
+        serializedVersion: 2
+        x: 15275
+        y: 0
+        width: 540
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3a6e984f1b62442b6ed74d353d1d23
+      internalID: -1912732573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_26
+      rect:
+        serializedVersion: 2
+        x: 15839
+        y: 0
+        width: 467
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d167ff64ba0b448b5079fdd0b520d9
+      internalID: -431831955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_27
+      rect:
+        serializedVersion: 2
+        x: 16340
+        y: 0
+        width: 457
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f150e7e8a0a4f1c4093d032a98e0b23c
+      internalID: -712962216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_28
+      rect:
+        serializedVersion: 2
+        x: 16826
+        y: 0
+        width: 442
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3274d813551a54eb09b0232ae0b60c
+      internalID: 1812980382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_29
+      rect:
+        serializedVersion: 2
+        x: 17293
+        y: 0
+        width: 427
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd411376ea8cf04599f693d92d9cb4e
+      internalID: -307289192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_30
+      rect:
+        serializedVersion: 2
+        x: 17752
+        y: 0
+        width: 388
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3771c904ca10543a44b7b0478ba581
+      internalID: -148413590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_31
+      rect:
+        serializedVersion: 2
+        x: 18177
+        y: 0
+        width: 390
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f912214c002df1d4d9167c1dcf79a1ae
+      internalID: 1342531230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_32
+      rect:
+        serializedVersion: 2
+        x: 18596
+        y: 0
+        width: 391
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0c0f60e6562ae4f8e0b44c304747aa
+      internalID: -39725113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_33
+      rect:
+        serializedVersion: 2
+        x: 19024
+        y: 0
+        width: 383
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f078d6d86082a46aea4468320ec24b
+      internalID: -2036184420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mele_34
+      rect:
+        serializedVersion: 2
+        x: 19441
+        y: 0
+        width: 405
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368c2532027762942a68232c31ce6075
+      internalID: 160723990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mele_0: -523733767
+      mele_1: -2093554693
+      mele_10: -1706171649
+      mele_11: 831343832
+      mele_12: 1806295935
+      mele_13: 1381646742
+      mele_14: 1409232992
+      mele_15: -2043331586
+      mele_16: 537699955
+      mele_17: -2102903326
+      mele_18: -1216270151
+      mele_19: 1513576853
+      mele_2: -1350250677
+      mele_20: -2114294995
+      mele_21: -1732175343
+      mele_22: -1502002855
+      mele_23: 1665424794
+      mele_24: -1321370058
+      mele_25: -1912732573
+      mele_26: -431831955
+      mele_27: -712962216
+      mele_28: 1812980382
+      mele_29: -307289192
+      mele_3: -1189934801
+      mele_30: -148413590
+      mele_31: 1342531230
+      mele_32: -39725113
+      mele_33: -2036184420
+      mele_34: 160723990
+      mele_4: 45700712
+      mele_5: 1151546638
+      mele_6: 815137978
+      mele_7: -1795792100
+      mele_8: 1684365694
+      mele_9: -1937367253
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
