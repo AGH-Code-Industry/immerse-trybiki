@@ -16,6 +16,8 @@ public enum EnemyState {
 public class Enemy : MonoBehaviour, IDamageable, IStunable {
     [SerializeField] private EnemySO _enemySO;
     [SerializeField] private HealthBarUI _healthBarUI;
+
+    public event EventHandler OnEnemyDeath;
     
     private EnemyMovement _movementModule;
     private EnemyAttack _enemyAttack;
@@ -83,6 +85,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
 
     private void Start() {
         CaughtPlayer();
+        PlayerArrows.instance.SpawnArrow(this);
     }
 
     private void Update() {
@@ -161,6 +164,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
             Rigidbody2D rigidbody2D = Instantiate(_gearsOnDeath, transform.position, transform.rotation).GetComponent<Rigidbody2D>();
             rigidbody2D.AddForce(Vector2.up * Random.Range(2f, 4f) + Vector2.left * Random.Range(0f, 1f) + Vector2.right * Random.Range(0f, 1f), ForceMode2D.Impulse);
         }
+        OnEnemyDeath?.Invoke(this, EventArgs.Empty);
         EnemySpawners.instance.RemoveEnemy(this);
         Destroy(gameObject);
     }
