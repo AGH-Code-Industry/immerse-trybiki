@@ -288,6 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeAttackCollider: {fileID: 4937479014777829611}
+  onPlayerDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8626768568891006273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +303,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d230e165cd5d643819ddd97958b4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialGearList: []
+  initialGearList:
+  - {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
+  - {fileID: 2790965165420466040, guid: 90aa12051ab08a741a6c6983716935eb, type: 3}
+  - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
+  - {fileID: 2790965165420466040, guid: 1c6bff391a22b954091992137353673e, type: 3}
+  - {fileID: 2790965165420466040, guid: 90aa12051ab08a741a6c6983716935eb, type: 3}
+  - {fileID: 2790965165420466040, guid: a996b4b14bc3bac40b8db04c58c6c2e5, type: 3}
   maxGears: 6
 --- !u!114 &5331918266561465511
 MonoBehaviour:
@@ -335,3 +344,5 @@ MonoBehaviour:
   rangeAttackCooldown: 1
   movementSpeed: 2
   jumpForce: 5
+  currentMoney: 2
+  moneyText: {fileID: 0}
