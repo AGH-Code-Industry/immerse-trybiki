@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class MachineManager : MonoBehaviour {
+    public static MachineManager instance;
     [SerializeField]
     private int currentGears;
     public int CurrentGears {
@@ -31,6 +32,10 @@ public class MachineManager : MonoBehaviour {
 
     private MapTurningManager mapTurningManager;
 
+    private void Awake() {
+        instance = this;
+    }
+
     private void Start() {
         mapTurningManager = FindObjectOfType<MapTurningManager>();
     }
@@ -44,6 +49,6 @@ public class MachineManager : MonoBehaviour {
     }
 
     private void UpdateMapTurning() {
-        mapTurningManager.ActualRotationPercentage = (float)currentGears / maxGears;
+        mapTurningManager.DesiredRotationPercentage = (float)currentGears / maxGears;
     }
 }

@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d359ed-d3c6-4697-9f0a-09a38440dd88" name="Changes" comment="wave spawner">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.immerse-trybiki/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawners.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawners.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Machine/MachineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Machine/MachineManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/EnemySpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/EnemySpawners.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/EnemySpawners.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawners.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Flying.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/Enemy/Flying.cs" root0="SKIP_HIGHLIGHTING" />
@@ -79,6 +81,7 @@
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/RangeAttack/GearSpecialAction/AOEDmg.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/Assets/Scripts/RangeAttack/GearSpecialAction/AOEStun.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HealthBarUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/UpgradeScripts/UpgradeBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UiGearQueueDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/kacper/Desktop/Code_Industry/GameJam/immerse-trybiki/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
