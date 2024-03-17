@@ -16,6 +16,6 @@ MonoBehaviour:
   upgradeDescription: Heal
   upgradeUI: {fileID: 21300000, guid: ba5834c988a3f0e49b280fb997dacbf7, type: 3}
   upgradePrice: 10
-  nextUpgradeIncreaseCost: 20
+  nextUpgradeIncreaseCost: 10
   upgradable: {fileID: 867586414220417331, guid: 5c07360499b35c44bae0a15f817c8e8c, type: 3}
   upgradeValue: 30
