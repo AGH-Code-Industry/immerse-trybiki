@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2436174105727626441}
   - component: {fileID: 3913806598936322340}
   - component: {fileID: 5224326200526451970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CollectableMagnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a771f55dc23b94ab42584ee0c3f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCollider: {fileID: 0}
   meleeAttackCollider: {fileID: 4937479014777829611}
   onPlayerDead:
     m_PersistentCalls:

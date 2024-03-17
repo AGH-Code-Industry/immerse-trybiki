@@ -166,6 +166,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
         }
         OnEnemyDeath?.Invoke(this, EventArgs.Empty);
         EnemySpawners.instance.RemoveEnemy(this);
+        Debug.Log("dupa");
         Destroy(gameObject);
     }
 
