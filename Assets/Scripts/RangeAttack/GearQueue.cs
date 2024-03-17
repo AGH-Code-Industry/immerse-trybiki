@@ -7,13 +7,15 @@ public class GearQueue : MonoBehaviour
 {
     private UiGearQueueDisplay uiGearQueueDisplay;
     private Queue<GameObject> _gearQueue = new Queue<GameObject>();
+    
+    public List<GameObject> _gearsWithTypes = new();
 
     private void Awake() {
         uiGearQueueDisplay = FindObjectOfType<UiGearQueueDisplay>();
     }
 
     public void AddGear(GameObject gear) {
-        _gearQueue.Enqueue(gear);
+        _gearQueue.Enqueue(_gearsWithTypes[(int)gear.GetComponent<Gear>().gearSO.GearType]);
         UpdateUiGears();
     }
     

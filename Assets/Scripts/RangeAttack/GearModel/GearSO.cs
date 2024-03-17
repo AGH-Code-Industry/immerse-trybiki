@@ -10,4 +10,5 @@ public class GearSO : ScriptableObject
     public float gearLifeTime;
     public float gearKnockback;
     public GameObject gearSpecialAction;
+    public GearType GearType;
 }
