@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2790965165420466040}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.254, y: -0.077, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00785553, y: 0.00785553, z: 0.00785553}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gearSO: {fileID: 11400000, guid: 223fee0c657a2e543929c09c87394480, type: 2}
+  particleSystemObject: {fileID: 6791662699137752182, guid: 509063fafc8eb6b4e89a0ae29b7d3f2c, type: 3}
 --- !u!58 &1691311855384617430
 CircleCollider2D:
   m_ObjectHideFlags: 0
