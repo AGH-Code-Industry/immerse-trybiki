@@ -8,9 +8,9 @@ public enum EnemyType {
 }
 
 public class EnemySpawner : MonoBehaviour {
-    [SerializeField] private List<GameObject> _types;
+    [SerializeField] private List<GameObject> _types = new();
     
-    public void SpawnEnemy(EnemyType typeToSpawn) {
-        Instantiate(_types[(int)typeToSpawn], transform.position, transform.rotation);
+    public Enemy SpawnEnemy(EnemyType typeToSpawn) {
+        return Instantiate(_types[(int)typeToSpawn], transform.position, transform.rotation).GetComponent<Enemy>();
     }
 }

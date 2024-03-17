@@ -71,6 +71,14 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
         _minimumGearsOnDeath = _enemySO.minimumGearsOnDeath;
         _maximumGearsOnDeath = _enemySO.maximumGearsOnDeath;
         _attackCooldown = 0f;
+
+        GetComponent<BoxCollider2D>().enabled = false;
+        StartCoroutine(ActiveCollider());
+    }
+
+    private IEnumerator ActiveCollider() {
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 
     private void Start() {
@@ -153,6 +161,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
             Rigidbody2D rigidbody2D = Instantiate(_gearsOnDeath, transform.position, transform.rotation).GetComponent<Rigidbody2D>();
             rigidbody2D.AddForce(Vector2.up * Random.Range(2f, 4f) + Vector2.left * Random.Range(0f, 1f) + Vector2.right * Random.Range(0f, 1f), ForceMode2D.Impulse);
         }
+        EnemySpawners.instance.RemoveEnemy(this);
         Destroy(gameObject);
     }
 

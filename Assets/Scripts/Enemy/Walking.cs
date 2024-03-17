@@ -33,6 +33,8 @@ public class Walking : EnemyMovement {
     }
 
     public override void Move() {
+        transform.eulerAngles = new Vector3(0f, _target.transform.position.x - transform.position.x > 0 ? 0 : 180, 0f);
+
         if (!_canMove || stunned)
             return;
         
