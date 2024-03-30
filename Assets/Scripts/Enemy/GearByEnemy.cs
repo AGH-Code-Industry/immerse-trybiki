@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GearByEnemy : MonoBehaviour
 {
+    [SerializeField] private GameObject particleHit;
     private Rigidbody2D rb;
     private float _timeToLive = 10f;
 
@@ -30,6 +32,8 @@ public class GearByEnemy : MonoBehaviour
         Component damageable = null;
         if (other.TryGetComponent(typeof(IDamageable), out damageable) && !other.CompareTag("Enemy") ){
             ((IDamageable)damageable).TakeDamage(_damage);
+            Instantiate(particleHit, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }
