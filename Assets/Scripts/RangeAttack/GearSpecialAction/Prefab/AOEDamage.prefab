@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc35ea82ccd6f04cac56ebe11f8a24d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 2
   gearSO: {fileID: 11400000, guid: 67cbd4d5f07da50459712f266ad5514e, type: 2}
 --- !u!1001 &172627887005295927
 PrefabInstance:

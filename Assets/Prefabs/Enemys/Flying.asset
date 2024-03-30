@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Flying
   m_EditorClassIdentifier: 
   enemyName: Flying
-  hp: 30
+  hp: 50
   attackType: 1
-  attackDamage: 10
-  timeMultiplayer: 1.1
-  speed: 2
+  attackDamage: 3
+  timeMultiplayer: 0.2
+  speed: 1
   caughtDistance: 1000
   attackDistance: 2
   aimingDistance: 0.5
-  cooldown: 2
-  force: 20
-  minimumGearsOnDeath: 2
-  maximumGearsOnDeath: 5
+  cooldown: 0.2
+  force: 10
+  minimumGearsOnDeath: 3
+  maximumGearsOnDeath: 15

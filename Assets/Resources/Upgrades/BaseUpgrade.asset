@@ -18,4 +18,4 @@ MonoBehaviour:
   upgradePrice: 50
   nextUpgradeIncreaseCost: 0
   upgradable: {fileID: 867586414220417331, guid: d4dc1e89aeeb896beaf490ecbfdd534e, type: 3}
-  upgradeValue: 50
+  upgradeValue: 200

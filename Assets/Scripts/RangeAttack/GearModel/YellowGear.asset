@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: YellowGear
   m_EditorClassIdentifier: 
   gearName: Yellow Gear
-  gearDamage: 15
+  gearDamage: 3
   gearThrowForce: 15
   gearLifeTime: 0
   gearKnockback: 0

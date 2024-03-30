@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedGear
   m_EditorClassIdentifier: 
   gearName: Red Gear
-  gearDamage: 30
+  gearDamage: 45
   gearThrowForce: 15
   gearLifeTime: 0
   gearKnockback: 5

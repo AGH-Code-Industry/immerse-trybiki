@@ -22,6 +22,7 @@ public class UpgradeDisplay : MonoBehaviour
     {
         this.upgradeSO = upgradeSO;
         upgradeManager = FindAnyObjectByType<UpgradeManager>();
+        upgradeButton.onClick.AddListener(() => upgradeSO.upgradable.GetComponent<Upgradable>().IncreaseStat(upgradeSO.upgradeValue));
     }
 
     public void DisplayUpgradeStats()
@@ -30,7 +31,6 @@ public class UpgradeDisplay : MonoBehaviour
         upgradeDescription.text = upgradeSO.upgradeDescription;
         upgradeSprite.sprite = upgradeSO.upgradeUI;
         upgradePrice.text = GetUpgradePrice().ToString();
-        upgradeButton.onClick.AddListener(() => upgradeSO.upgradable.GetComponent<Upgradable>().IncreaseStat(upgradeSO.upgradeValue));
         upgradeLevel.text = "Level: " + level.ToString();
     }
 
@@ -42,7 +42,7 @@ public class UpgradeDisplay : MonoBehaviour
 
     public int GetUpgradePrice()
     {
-        return upgradeSO.upgradePrice + level * upgradeSO.nextUpgradeIncreaseCost;
+        return (upgradeSO.upgradePrice + level * upgradeSO.nextUpgradeIncreaseCost);
     }
 
     public UpgradeSO GetUpgradeSO()
