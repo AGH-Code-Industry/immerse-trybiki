@@ -3,15 +3,25 @@ using UnityEngine;
 
 namespace Map {
     public class MapTurningManager : Observable {
+        public static MapTurningManager intance;
         [SerializeField] private float turnStep = 0.01f;
+        [SerializeField] private float timeMultiplayer = 0.01f;
 
         private float _actualRotationPercentage = 0;
         private float _desiredRotationPercentage = 0;
+
+        private void Awake() {
+            intance = this;
+        }
+
+        public void IncreaseTurningSpeed() {
+            turnStep += timeMultiplayer;
+        }
+
         public float ActualRotationPercentage {
-            get => _actualRotationPercentage;
+            get => _actualRotationPercentage % 1;
             set {
                 if (value < 0) value = 0;
-                if (value > 1) value = 1;
                 _actualRotationPercentage = value;
                 InvokeAllSubscribers();
             }
@@ -25,15 +35,7 @@ namespace Map {
 
         private void Update()
         {
-            if (Mathf.Abs(ActualRotationPercentage - _desiredRotationPercentage) < 2 * turnStep) return;
-            if (ActualRotationPercentage > _desiredRotationPercentage)
-            {
-                ActualRotationPercentage -= turnStep * Time.deltaTime;
-            } else
-            {
-                ActualRotationPercentage += turnStep * Time.deltaTime;
-            }
-            
+            ActualRotationPercentage += turnStep * Time.deltaTime;
         }
     }
 }
