@@ -34,7 +34,7 @@ public class UIProgressManager : MonoBehaviour
     }
 
     private void ActualizeProgress() {
-        Debug.Log("Actualize Result" + leftLimit + ((rightLimit - leftLimit) * currentProgress));
+        //Debug.Log("Actualize Result" + leftLimit + ((rightLimit - leftLimit) * currentProgress));
         _rectTransform.sizeDelta = new Vector2 (leftLimit + ((rightLimit - leftLimit) * currentProgress), 37);
     }
 }
