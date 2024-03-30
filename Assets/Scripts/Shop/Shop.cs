@@ -25,6 +25,7 @@ public class Shop : MonoBehaviour
             playerInShop = false;
             shopUI.SetActive(false);
             InputManager.input.Player.MeleeAttack.Enable();
+            Time.timeScale = 1;
             return;
         }
 
@@ -34,6 +35,7 @@ public class Shop : MonoBehaviour
             InputManager.input.Player.MeleeAttack.Disable();
             playerInShop = true;
             shopUI.SetActive(true);
+            Time.timeScale = 0;
             return;
         }
     }

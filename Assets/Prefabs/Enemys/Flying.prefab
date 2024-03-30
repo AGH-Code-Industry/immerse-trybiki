@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 153689753497348692}
   - component: {fileID: 7291360103187977615}
   - component: {fileID: 7146524907876425339}
+  - component: {fileID: 7624933653276645428}
   m_Layer: 6
   m_Name: Flying
   m_TagString: Enemy
@@ -202,6 +203,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 35.68, y: 30.070158}
   m_EdgeRadius: 0
+--- !u!95 &7624933653276645428
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576989832551292379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32d9c4f3dac1d40ce9163a5d244f4bd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &453275139030434998
 PrefabInstance:
   m_ObjectHideFlags: 0
