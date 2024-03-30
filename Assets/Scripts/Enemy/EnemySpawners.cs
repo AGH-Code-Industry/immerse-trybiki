@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Map;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -40,6 +41,7 @@ public class EnemySpawners : MonoBehaviour {
 
     private void EndWave() {
         StartCoroutine(NextWave(pauseTimeBeetweenWave));
+        MapTurningManager.intance.IncreaseTurningSpeed();
     }
 
     private IEnumerator NextWave(float time) {
