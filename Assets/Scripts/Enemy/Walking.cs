@@ -10,6 +10,7 @@ public class Walking : EnemyMovement {
     
     private Transform _target;
     private int _targetPoint;
+    private Platform _platform;
 
     private bool _canMove;
 
@@ -23,12 +24,21 @@ public class Walking : EnemyMovement {
             if (recastHit.transform.gameObject.TryGetComponent(out Platform platform)) {
                 _points = platform._points;
                 find = true;
+                _platform = platform;
+                transform.position = new Vector3(_points[0].position.x, _points[0].position.y + 2f, _points[0].position.z);
                 break;
             }
         }
         if (!find) {
             Destroy(gameObject);
         }
+
+    }
+
+    private void Update() {
+        if (!_platform)
+            return;
+        _points = _platform._points;
         _target = _points[_targetPoint];
     }
 
@@ -37,7 +47,7 @@ public class Walking : EnemyMovement {
 
         if (!_canMove || stunned)
             return;
-        
+        Debug.Log(_target.position);
         transform.position = Vector2.MoveTowards(transform.position, _target.position, _baseEnemy.Speed * Time.fixedDeltaTime);
         if (Vector2.Distance(transform.position, _target.position) < Epsilon && _baseEnemy.EnemyState != EnemyState.Attacking) {
             SetPointTarget();

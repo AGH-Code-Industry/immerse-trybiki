@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6067748519837518686, guid: a3b311b5f1557eb5cb9c84c41ad1c8d7, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6946165076947843688, guid: a3b311b5f1557eb5cb9c84c41ad1c8d7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
