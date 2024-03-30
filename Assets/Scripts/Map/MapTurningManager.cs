@@ -19,7 +19,7 @@ namespace Map {
         }
 
         public float ActualRotationPercentage {
-            get => _actualRotationPercentage % 1;
+            get => _actualRotationPercentage % 1.01f;
             set {
                 if (value < 0) value = 0;
                 _actualRotationPercentage = value;
