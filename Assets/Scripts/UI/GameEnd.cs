@@ -13,24 +13,29 @@ public class GameEnd : MonoBehaviour {
 
     [SerializeField] private TextMeshProUGUI timetext;
 
-    [SerializeField] private Button _tryAgain1;
-    [SerializeField] private Button _tryAgain2;
-
     private void Awake() {
         instance = this;
         finishGame.SetActive(false);
         losegame.SetActive(false);
-        _tryAgain1.onClick.AddListener(() => GameManager.instance.ReloadScene());
-        _tryAgain2.onClick.AddListener(() => GameManager.instance.ReloadScene());
     }
 
     public void LoseGame() {
+        TurnOffAllUI();
         losegame.SetActive(true);
     }
 
     public void WinGame() {
+        TurnOffAllUI();
         finishGame.SetActive(true);
         GameManager.instance.StopCountTime();
         timetext.text = "You finished in: " + Mathf.Floor(GameManager.instance.time) + " seconds";
+    }
+
+    void TurnOffAllUI()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 }

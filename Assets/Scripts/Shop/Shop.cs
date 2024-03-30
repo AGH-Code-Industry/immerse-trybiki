@@ -15,6 +15,7 @@ public class Shop : MonoBehaviour
         InputManager.input.Player.ShopInteraction.performed += EnterExitShop;
         shopUI.SetActive(false);
         playerInShop = false;
+        PlayerArrows.instance.SpawnShopArrow(this);
     }
 
     private void EnterExitShop(UnityEngine.InputSystem.InputAction.CallbackContext context)

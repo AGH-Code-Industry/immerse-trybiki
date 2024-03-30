@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
 
     private void Start() {
         CaughtPlayer();
-        PlayerArrows.instance.SpawnArrow(this);
+        PlayerArrows.instance.SpawnEnemyArrow(this);
     }
 
     private void Update() {

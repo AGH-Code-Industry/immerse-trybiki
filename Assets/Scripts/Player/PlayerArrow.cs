@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerArrow : MonoBehaviour {
-    private Enemy _following;
+    private GameObject _following;
 
     [SerializeField]
     private float distanceToHide;
@@ -13,11 +13,13 @@ public class PlayerArrow : MonoBehaviour {
 
     private SpriteRenderer arrowImage;
     
-    public void StartPointing(Enemy enemyToFollow) {
+    public void StartPointing(GameObject objectToFollow) {
         arrowImage = GetComponentInChildren<SpriteRenderer>();
-        _following = enemyToFollow;
+        _following = objectToFollow;
         _startFollow = true;
-        enemyToFollow.OnEnemyDeath += EnemyToFollowOnOnEnemyDeath;
+        if (objectToFollow.TryGetComponent<Enemy>(out Enemy enemy)) {
+            enemy.OnEnemyDeath += EnemyToFollowOnOnEnemyDeath;
+        }
     }
 
     private void EnemyToFollowOnOnEnemyDeath(object sender, EventArgs e) {
