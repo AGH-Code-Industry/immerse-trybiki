@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee1c7fe29869306b840ad853687163a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arrowPrefab: {fileID: 2669779157684906261, guid: 0b84aa783a87616e7b637feeca84d60a, type: 3}
+  _enemyArrowPrefab: {fileID: 2669779157684906261, guid: 0b84aa783a87616e7b637feeca84d60a, type: 3}
+  _shopArrowPrefab: {fileID: 2669779157684906261, guid: 00c81b7eac0605b4580830efe73b7f07, type: 3}

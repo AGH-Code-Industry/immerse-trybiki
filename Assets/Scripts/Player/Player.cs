@@ -106,7 +106,7 @@ public class Player : MonoBehaviour, IDamageable {
 
     public void RangeAttackForAnimation()
     {
-        Debug.Log("Called Range Attack");
+        //Debug.Log("Called Range Attack");
         StartCoroutine(AttackRangeCooldown(stats.RangeAttackCooldown));
         if (gearsManager.CanThrowGear()) {
             gearsManager.ThrowGear(transform.position);

@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
 
     private void Start() {
         CaughtPlayer();
-        PlayerArrows.instance.SpawnArrow(this);
+        PlayerArrows.instance.SpawnEnemyArrow(this);
     }
 
     private void Update() {
@@ -166,7 +166,7 @@ public class Enemy : MonoBehaviour, IDamageable, IStunable {
         }
         OnEnemyDeath?.Invoke(this, EventArgs.Empty);
         EnemySpawners.instance.RemoveEnemy(this);
-        Debug.Log("dupa");
+        //Debug.Log("dupa");
         Destroy(gameObject);
     }
 
